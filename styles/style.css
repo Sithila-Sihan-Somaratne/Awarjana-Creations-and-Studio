@@ -34,8 +34,8 @@
     display: inline-block;
     text-decoration: none;
     color: #ffc107;
-    font-weight: 500;
-    font-size: 1.2rem;
+    font-weight: bold;
+    font-size: 1.4rem;
     transition: all 0.3s;
 }
 
