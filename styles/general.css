@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    margin-bottom: 0 !important;
     box-sizing: border-box;
 }
 
@@ -27,15 +28,8 @@ body {
 }
 
 /**************************/
-/* GENRAL REUSABLE COMPONENTS */
+/* GENERAL REUSABLE COMPONENTS */
 /**************************/
-
-.container {
-    /* 1140px */
-    max-width: 120rem;
-    padding: 0 3.2rem;
-    margin: 0 auto;
-}
 
 .grid {
     display: grid;
@@ -202,5 +196,23 @@ body {
 }
 
 strong {
+    font-weight: 600;
+}
+
+.section-about-us,
+.section-why-us,
+.section-hours,
+.section-products,
+.section-pricings,
+.section-contacts {
+    padding: 9.6rem 0;
+}
+
+.heading-section{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
     font-weight: 500;
+    margin-bottom: 2.4rem;
+    color: #806411;
 }

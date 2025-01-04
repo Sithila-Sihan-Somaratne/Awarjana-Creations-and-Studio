@@ -32,89 +32,273 @@
             <ul class="main-nav-list">
                 <li><a class="main-nav-link" href="#about_us">ABOUT US</a></li>
                 <li><a class="main-nav-link" href="#products">PRODUCTS</a></li>
-                <li><a class="main-nav-link" href="#what_do_we_do">WHAT DO WE DO</a></li>
                 <li><a class="main-nav-link" href="#why_us">WHY US</a></li>
-                <li><a class="main-nav-link" href="#pricings">PRICINGS</a></li>
+                <li><a class="main-nav-link" href="#hours">HOURS</a></li>
                 <li><a class="main-nav-link" href="#contacts">CONTACTS</a></li>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img height="60px" src="images/languages.png" alt="Sinhala and English Languages Icon">
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#"><img height="30px" src="images/sinhala.png" alt="Sinhala Languages Icon">සිංහල</a></li>
+                      <li><a class="dropdown-item" href="#"><img height="30px" src="images/english.png" alt="Englsih Languages Icon">English</a></li>
+                    </ul>
+                </div>
             </ul>
         </nav>
-
         <button class="btn-mobile-nav">
             <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
             <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
         </button>
     </header>
-
     <section class="section-hero">
         <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                <div class="col-10 col-sm-8 col-lg-6" data-aos="slide-left">
-                    <img alt="Awarjana Creations Shop" src="images/hero-image.jpg" class="d-block mx-lg-auto img-fluid"
-                        alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-                </div>
-                <div class="col-lg-6" data-aos="slide-right">
-                    <h1 class="display-1 fw-bold text-light lh-1 mb-3">Get what you need with Awarjana!</h1>
+            <div class="row flex-lg-row align-items-center g-5 py-5">
+                <div class="col-lg-6" data-aos="fade-in">
+                    <h1 class="display-1 fw-bold text-light main-h1">Get what you need with Awarjana!</h1>
                     <br>
-                    <p class="display-6 lead text-light">At Awarjana Creations and Studio, we believe in the power of creativity
+                    <p class="fs-3 lead text-light main-p">At Awarjana Creations and Studio, we believe in the power of
+                        creativity
                         and innovation. Our mission is to bring your ideas to life through exceptional design and
                         craftsmanship. Whether you're looking for bespoke artwork, custom designs, or professional
                         studio services, we are here to exceed your expectations.
-                    </p>
-                    <br>
-                    <div class="d-grid gap-4 d-md-flex justify-content-md-start">
-                        <button type="button" class="btn btn-warning btn-lg px-4 me-md-2">Primary</button>
-                        <button type="button" class="btn btn-outline-warning btn-lg px-4">Default</button>
+                    </p> <br>
+                    <div class="hero-btn-div d-grid gap-4 d-md-flex">
+                        <button type="button" class="btn-hero btn btn-warning btn-lg px-4">Contact us!</button>
+                        <button type="button" class="btn-hero btn btn-outline-warning btn-lg px-4">Learn more
+                            &downarrow;</button>
                     </div>
                     <br>
+                </div>
+                <div class="col-lg-6 hero-img-box" data-aos="zoom-in">
+                    <img alt="Awarjana Creations Shop" src="images/hero2.jpg" class="img-fluid rounded" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
-
+    <section class="section-featured">
+        <div class="container">
+            <h2 class="heading heading-featured-in">Trusted by</h2><br>
+            <div class="logos">
+                <img src="images/logo.png" alt="Techcrunch logo" />
+                <img src="images/logo.png" alt="Business Insider logo" />
+                <img src="images/logo.png" alt="The New York Times logo" />
+                <img src="images/logo.png" alt="Forbes logo" />
+                <img src="images/logo.png" alt="USA Today logo" />
+            </div>
+        </div>
+    </section>
+    <hr>
     <section id="about_us" class="section-about-us">
         <div class="container">
-            <h2>About Us</h2>
-            <p>At Awarjana Creations and Studio, we believe in the power of creativity and innovation...</p>
+            <h2 class="heading-section">About us</h2>
+
+            <div class="zigzag">
+                <div class="content">
+                    <h3 class="display-3 fw-bold">Who are we?</h3>
+                    <p class="fs-4 lead">Awarjana Creations is a dedicated team of professionals specializing in
+                        printing
+                        services, digital creations, and graphic design. Our talented group is committed to delivering
+                        high-quality and innovative solutions to meet all your creative and printing needs. </p>
+                </div>
+                <div class="map-container">
+                    <!-- Placeholder for image or additional content -->
+                </div>
+            </div>
+
+            <div class="zigzag">
+                <div class="map-container">
+                    <!-- Placeholder for image or additional content -->
+                </div>
+                <div class="content">
+                    <h3 class="display-3 fw-bold">Our history</h3>
+                    <p class="fs-4 lead">Founded in [Year], Awarjana Creations has grown from a small startup to a
+                        thriving
+                        business, reaching numerous milestones along the way.
+                    </p>
+                </div>
+            </div>
+
+            <div class="zigzag">
+                <div class="content">
+                    <h3 class="display-3 fw-bold">Where are we?</h3>
+                    <p class="fs-4 lead">We are in No. 64, Muslim Church Road, 24 Veyangoda Rd, Minuwangoda 11550, Sri
+                        Lanka.
+                        <br>
+                        Some of the places around Awarjana Creations are:
+                    </p>
+                    <ul class="list-unstyled fs-4 lead">
+                        <li><i class="fas fa-plane"></i> MySL Travel (Pvt) Ltd (Travel agency) No 82 3rd floor Freedom
+                            Park
+                            Shopping Complex, Minuwangoda 11550, Sri Lanka (approx. 226 meters)</li>
+                        <li><i class="fas fa-plane"></i> MySL Travel (Travel agency) No 82 3rd floor Freedom Park
+                            Shopping
+                            Complex, Minuwangoda 11550, Sri Lanka (approx. 226 meters)</li>
+                        <li><i class="fas fa-taxi"></i> KDH Van for Hire - Minuwangoda (Taxi service) 315/2 muruthawala
+                            watta
+                            radawadunna, Pasyala 11890, Sri Lanka (approx. 128 meters)</li>
+                        <li><i class="fas fa-warehouse"></i> Alugrow Trading (Pvt) Ltd Minuwangoda, Sri Lanka (approx.
+                            294
+                            meters)</li>
+                        <li><i class="fas fa-university"></i> Citizen Development Bank (Bank) Minuwangoda, Sri Lanka
+                            (approx.
+                            206 meters)</li>
+                        <li><i class="fas fa-shield-alt"></i> Ceylinco Life (Life insurance agency) 52B, Negombo Rd,
+                            Minuwangoda, Sri Lanka (approx. 310 meters)</li>
+                        <li><i class="fas fa-piggy-bank"></i> Vallibel Finance (Financial institution) No. 28/5A
+                            Kurunegala Rd,
+                            Minuwangoda, Sri Lanka (approx. 232 meters)</li>
+                        <li><i class="fas fa-university"></i> Bank of Ceylon Minuwangoda (Public Sector Bank) No. 66
+                            Divulapitiya Rd, Minuwangoda, Sri Lanka (approx. 224 meters)</li>
+                        <li><i class="fas fa-phone"></i> Sri Lanka Telecom Minuwangoda (Telecommunications service
+                            provider)
+                            Katunayake-Veyangoda Rd, Minuwangoda, Sri Lanka (approx. 259 meters)</li>
+                        <li><i class="fas fa-bullhorn"></i> DineshSeya Advertising (Advertising agency) New Ham Rd,
+                            Minuwangoda,
+                            Sri Lanka (approx. 214 meters)</li>
+                    </ul>
+                </div>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d498.0500656552279!2d79.94826953069263!3d7.168905915326929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2e5d0fa312f21%3A0x639f574d5aa3ae69!2sAwarjana%20Creations!5e1!3m2!1sit!2sit!4v1735655185724!5m2!1sit!2sit"
+                        width="600" height="550" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
         </div>
     </section>
-
+    <hr>
     <section id="products" class="section-products">
         <div class="container">
-            <h2>Our Products</h2>
-            <p>Explore our wide range of products designed to meet all your needs...</p>
+            <h2 class="heading-section">Our products</h2>
+            <h2 class="display-2 fw-bold">The fruit of our work makes our clients happy!</h2>
+            <h2 class="display-2 fw-bold"></h2>
+            <p class="fs-4 lead">Explore our wide range of products designed to meet all your needs:</p>
+            <div class="row text-center">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="p-3 grid-products-div">
+                        <img src="images/hero2.jpg" alt="" class="img-fluid img-box">
+                        <p class="fs-1 fw-bold product-row-heading">Digital printing</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="p-3 grid-products-div">
+                        <img src="images/hero2.jpg" alt="" class="img-fluid img-box">
+                        <p class="fs-1 fw-bold product-row-heading">Photo printing</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="p-3 grid-products-div">
+                        <img src="images/hero2.jpg" alt="" class="img-fluid img-box">
+                        <p class="fs-1 fw-bold product-row-heading">Mug printing</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="p-3 grid-products-div">
+                        <img src="images/hero2.jpg" alt="" class="img-fluid img-box">
+                        <p class="fs-1 fw-bold product-row-heading">Visiting cards</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="p-3 grid-products-div">
+                        <img src="images/hero2.jpg" alt="" class="img-fluid img-box">
+                        <p class="fs-1 fw-bold product-row-heading">Wedding cards</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="p-3 grid-products-div">
+                        <img src="images/hero2.jpg" alt="" class="img-fluid img-box">
+                        <p class="fs-1 fw-bold product-row-heading">Rubber/Flash Seels</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
-    <section id="what_do_we_do" class="section-what-we-do">
-        <div class="container">
-            <h2>What Do We Do</h2>
-            <p>We offer a variety of services including bespoke artwork, custom designs, and professional studio services...</p>
-        </div>
-    </section>
-
+    <hr>
     <section id="why_us" class="section-why-us">
         <div class="container">
-            <h2>Why Choose Us</h2>
-            <p>Discover why our clients trust us for their creative needs...</p>
+            <h2 class="heading-section">Why us</h2>
+            <h2 class="display-2 fw-bold">The reasons clients choose us</h2>
+            <p class="fs-4 lead">Discover why our clients trust us for their creative needs...</p>
         </div>
     </section>
-
-    <section id="pricings" class="section-pricings">
+    <hr>
+    <section id="hours" class="section-hours">
         <div class="container">
-            <h2>Pricing</h2>
-            <p>Check out our competitive pricing for various services and products...</p>
+            <h2 class="heading-section">Hours</h2>
+            <h3 class="display-4 fw-bold">Are you open all days?</h3>
+            <p class="fs-4 lead">We're open all week including weekends.</p>
+            <table class="styled-table table table-hover table-striped-columns table-warning table-responsive">
+                <thead>
+                    <tr>
+                        <th>Day/Period</th>
+                        <th>Opening time</th>
+                        <th>Closing time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>8:30 A.M.</td>
+                        <td>6:30 P.M.</td>
+                        <td id="monday-status"></td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>8:30 A.M.</td>
+                        <td>6:30 P.M.</td>
+                        <td id="tuesday-status"></td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>8:30 A.M.</td>
+                        <td>6:30 P.M.</td>
+                        <td id="wednesday-status"></td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>8:30 A.M.</td>
+                        <td>6:30 P.M.</td>
+                        <td id="thursday-status"></td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>8:30 A.M.</td>
+                        <td>6:30 P.M.</td>
+                        <td id="friday-status"></td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>8:30 A.M.</td>
+                        <td>6:30 P.M.</td>
+                        <td id="saturday-status"></td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>8:30 A.M.</td>
+                        <td>6:30 P.M.</td>
+                        <td id="sunday-status"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <h3 class="display-4 fw-bold">Which days aren't you open?</h3><br>
+            <p class="fs-4 lead">We are not opened on national holidays. See below calendar: </p>
+            <br>
+            <div id="holiday-calendar" class="calendar"></div>
         </div>
     </section>
-
+    <hr>
     <section id="contacts" class="section-contacts">
         <div class="container">
-            <h2>Contact Us</h2>
-            <p>Get in touch with us for any inquiries or to request a quote...</p>
+            <h2 class="heading-section">Contacts</h2>
+            <h2 class="display-2 fw-bold">Stay with us in many ways!</h2>
+            <p class="fs-4 lead">Get in touch with us for any inquiries or to request a quote...</p>
         </div>
     </section>
-
     <footer class="footer">
-        <div class="container grid grid--footer">
+        <div class="container grid footer-grid">
             <div class="logo-col">
                 <a href="#" class="footer-logo">
                     <img class="logo" alt="Awarjana logo" src="images/logo.png" />
@@ -126,7 +310,8 @@
                             <ion-icon class="social-icon" name="logo-youtube"></ion-icon></a>
                     </li>
                     <li>
-                        <a target="_blank" class="footer-link" href="https://www.facebook.com/p/Awarjana-Creations-100090293863478">
+                        <a target="_blank" class="footer-link"
+                            href="https://www.facebook.com/p/Awarjana-Creations-100090293863478">
                             <ion-icon class="social-icon" name="logo-facebook"></ion-icon></a>
                     </li>
                     <li>
@@ -139,21 +324,21 @@
                     </li>
                 </ul>
 
-                <p class="copyright">
-                    Copyright &copy; <span class="year">2024</span> by Awarjana Creation and Studio, Inc. All rights
+                <p class="fs-4 copyright">
+                    Copyright &copy; <span class="year"></span> by Awarjana Creation and Studio, Inc. All rights
                     reserved.
                 </p>
             </div>
 
             <div class="address-col">
-                <p class="footer-heading">Contact us</p>
+                <h3 class="fs-3">Contact us</h3>
                 <address class="contacts">
-                    <p class="address">
-                        623 Harrison St., 2nd Floor, San Francisco, CA 94107
+                    <p class="address fs-4">
+                        No. 64, Muslim Church Road, 24 Veyangoda Rd, Minuwangoda 11550, Sri Lanka
                     </p>
-                    <p>
-                        <a class="footer-link" href="tel:415-201-6370">415-201-6370</a><br />
-                        <a class="footer-link" href="mailto:hello@omnifood.com">hello@omnifood.com</a>
+                    <p class="fs-4">
+                        <a class="footer-link" href="tel:+94 77 176 0459">+94 77 176 0459</a><br />
+                        <a class="footer-link" href="mailto:awarjanacreation1@gmail.com">awarjanacreation1@gmail.com</a>
                     </p>
                 </address>
             </div>
@@ -163,11 +348,9 @@
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    <script src="https://kit.fontawesome.com/7e0dc38838.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 </body>
 
