@@ -59,6 +59,10 @@
 /**************************/
 
 @media (max-width: 62em) {
+    .grid--5-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
     .main-h1, .main-p, .hero-img-box, .hero-btn-div{
         text-align: center;
         justify-content: center;
@@ -271,7 +275,8 @@
 
     .grid--2-cols,
     .grid--3-cols,
-    .grid--4-cols {
+    .grid--4-cols,
+    .grid--5-cols {
         grid-template-columns: 1fr;
     }
 

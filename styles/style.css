@@ -199,37 +199,54 @@
     text-align: center;
 }
 
-.grid-products-div {
-    position: relative;
+.carousel-image {
+    max-height: 400px;
+    /* Adjust as needed */
+    object-fit: cover;
+    /* or contain, depending on how you want the image to fit */
 }
 
-.product-row-heading {
-    opacity: 0;
-    clear: both;
-    text-transform: uppercase;
-    text-align: center;
-    color: white;
-    font-size: 1em;
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-    margin: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: opacity 0.3s ease;
+.carousel-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background for better text visibility */
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.img-box:hover {
-    transition: filter 0.3s ease;
-    filter: brightness(20%);
-    color: #111;
+/* Style for the carousel control icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #ffeb3b;
+  border: none; /* Remove default border */
+  padding: 10px; /* Adjust padding to control size of the background */
+  border-radius: 50%; /* Make the background circular */
+  width: 2em; /* Adjust size of the background circle */
+  height: 2em; /* Adjust size of the background circle */
+  color: #232323;
 }
 
-.img-box:hover+.product-row-heading {
-    opacity: 1;
-    /* Make it visible on hover */
+/* Make the arrow chevrons bolder and black */
+.carousel-control-prev-icon::before {
+  border-right: 0.3em solid black; /* Adjust thickness and color */
+  border-bottom: 0.3em solid black; /* Adjust thickness and color */
+  transform: translateX(0.25em) rotate(135deg); /* Adjust position and angle */
 }
 
+.carousel-control-next-icon::before {
+  border-left: 0.3em solid black; /* Adjust thickness and color */
+  border-bottom: 0.3em solid black; /* Adjust thickness and color */
+  transform: translateX(-0.25em) rotate(-135deg); /* Adjust position and angle */
+}
+
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.grid-why-div h3{
+    color: #dfac14;
+}
 /**************************/
 /* HOURS SECTION */
 /**************************/
@@ -257,17 +274,23 @@
     pointer-events: none;
 }
 
-.calendar {
+#calendar-container {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#calendar-header {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .calendar-month {
-    width: 200px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .calendar-days {
@@ -277,24 +300,70 @@
 }
 
 .calendar-day {
-    width: 100%;
-    padding: 5px;
-    text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.calendar-day.holiday {
-    background-color: #ffc107;
-}
-
-.calendar-day.blank {
-    background-color: #f9f9f9;
-}
-
-.calendar-month h4 {
+    border: 1px solid #ccc;
+    padding: 10px;
     text-align: center;
 }
+
+.current-day {
+    background-color: #ffeb3b;
+}
+
+.holiday {
+    background-color: #dfac14;
+}
+
+.btn-month {
+    background: transparent;
+    border: none;
+    color: #333;
+    font-size: medium;
+    font-weight: 700;
+}
+
+.legend {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    /* Center the legend section */
+    flex-direction: column;
+    align-items: center;
+}
+
+.legend h3 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.legend ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.legend li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.legend-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.legend-icon.current-day {
+    background-color: #ffeb3b;
+}
+
+.legend-icon.holiday {
+    background-color: #dfac14;
+}
+
 
 /**************************/
 /* FOOTER */
