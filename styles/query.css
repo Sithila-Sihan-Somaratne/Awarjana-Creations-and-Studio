@@ -148,18 +148,6 @@
         padding-top: 8rem; /* Space for sticky navigation */
     }
 
-    .footer {
-        text-align: center;
-    }
-
-    .footer-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .social-links {
-        justify-content: center;
-    }
-
     .section-about-us {
         text-align: justify;
     }
@@ -206,9 +194,8 @@
         grid-template-columns: repeat(6, 1fr);
     }
 
-    .logo-col,
-    .address-col {
-        grid-column: span 3;
+    .logo-col {
+        grid-column: span 1;
     }
 
     .nav-col {

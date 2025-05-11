@@ -213,40 +213,69 @@
     border-radius: 5px;
 }
 
-/* Style for the carousel control icons */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: #ffeb3b;
-  border: none; /* Remove default border */
-  padding: 10px; /* Adjust padding to control size of the background */
-  border-radius: 50%; /* Make the background circular */
-  width: 2em; /* Adjust size of the background circle */
-  height: 2em; /* Adjust size of the background circle */
-  color: #232323;
-}
 
 /* Make the arrow chevrons bolder and black */
 .carousel-control-prev-icon::before {
-  border-right: 0.3em solid black; /* Adjust thickness and color */
-  border-bottom: 0.3em solid black; /* Adjust thickness and color */
-  transform: translateX(0.25em) rotate(135deg); /* Adjust position and angle */
+    border-right: 0.3em solid black;
+    /* Adjust thickness and color */
+    border-bottom: 0.3em solid black;
+    /* Adjust thickness and color */
+    transform: translateX(0.25em) rotate(135deg);
+    /* Adjust position and angle */
 }
 
 .carousel-control-next-icon::before {
-  border-left: 0.3em solid black; /* Adjust thickness and color */
-  border-bottom: 0.3em solid black; /* Adjust thickness and color */
-  transform: translateX(-0.25em) rotate(-135deg); /* Adjust position and angle */
+    border-left: 0.3em solid black;
+    /* Adjust thickness and color */
+    border-bottom: 0.3em solid black;
+    /* Adjust thickness and color */
+    transform: translateX(-0.25em) rotate(-135deg);
+    /* Adjust position and angle */
+}
+
+.carousel-control-next-icon:after{
+  content: '>';
+  font-size: 55px;
+  color: #232323;
+  background-color: #ffeb3b;
+  border: none;
+  /* Remove default border */
+  padding: 10px;
+  /* Adjust padding to control size of the background */
+  border-radius: 50%;
+  /* Make the background circular */
+  width: 2em;
+  /* Adjust size of the background circle */
+  height: 2em;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: #232323;
+  background-color: #ffeb3b;
+  border: none;
+  /* Remove default border */
+  padding: 10px;
+  /* Adjust padding to control size of the background */
+  border-radius: 50%;
+  /* Make the background circular */
+  width: 2em;
+  /* Adjust size of the background circle */
+  height: 2em;
+
 }
 
 .carousel-control-prev:focus,
 .carousel-control-next:focus {
-  outline: none;
-  box-shadow: none;
+    outline: none;
+    box-shadow: none;
 }
 
-.grid-why-div h3{
+.grid-why-div h3 {
     color: #dfac14;
 }
+
 /**************************/
 /* HOURS SECTION */
 /**************************/
@@ -364,6 +393,15 @@
     background-color: #dfac14;
 }
 
+/**************************/
+/* CONTACTS */
+/**************************/
+
+.grid-contacts-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Equal width columns on wider screens */
+    gap: 30px; /* Adjust the gap between columns */
+}
 
 /**************************/
 /* FOOTER */
@@ -373,10 +411,11 @@
     background-color: #333;
     color: #fff;
     padding: 20px 0;
+    text-align: center;
 }
 
 .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .footer img.logo {
@@ -388,6 +427,7 @@
     padding: 0;
     display: flex;
     margin: 20px 0;
+    justify-content: center;
 }
 
 .social-links li {
