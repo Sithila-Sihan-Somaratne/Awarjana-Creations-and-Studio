@@ -3,19 +3,11 @@
 /**************************/
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #232323;
-
-    /* Because we want header to be sticky later */
-    height: 12rem;
-    padding: 0 4.8rem;
-    position: relative;
+    @apply flex justify-between items-center bg-gray-900 h-48 px-12 relative;
 }
 
 .logo {
-    height: 10rem;
+    @apply h-40;
 }
 
 /**************************/
@@ -23,63 +15,35 @@
 /**************************/
 
 .main-nav-list {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 4.8rem;
+    @apply list-none flex items-center gap-12;
 }
 
 .main-nav-link:link,
 .main-nav-link:visited {
-    display: inline-block;
-    text-decoration: none;
-    color: #ffc107;
-    font-weight: bold;
-    font-size: 2rem;
-    transition: all 0.3s;
+    @apply inline-block text-yellow-400 font-bold text-xl transition-all no-underline;
 }
 
 .main-nav-link:hover,
 .main-nav-link:active {
-    color: #dfac14;
+    @apply text-yellow-500;
 }
-
 
 /* MOBILE */
 .btn-mobile-nav {
-    border: none;
-    background: none;
-    cursor: pointer;
-
-    display: none;
+    @apply hidden border-none bg-none cursor-pointer;
 }
 
 .icon-mobile-nav {
-    height: 4.8rem;
-    width: 4.8rem;
-    color: #ffc107;
-}
-
-.icon-mobile-nav[name="close-outline"] {
-    display: none;
+    @apply h-12 w-12 text-yellow-400;
 }
 
 /* STICKY NAVIGATION */
 .sticky .header {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 12rem;
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color: rgba(35, 35, 35, 0.97);
-    z-index: 999;
-    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+    @apply fixed top-0 w-full h-48 bg-gray-900 bg-opacity-95 z-50 shadow-lg;
 }
 
 .sticky .section-hero {
-    margin-top: 9.6rem;
+    @apply mt-24;
 }
 
 /**************************/
@@ -87,58 +51,39 @@
 /**************************/
 
 .section-hero {
-    background-color: #232323;
-    padding: 4.8rem 0 9.6rem 0;
+    @apply bg-gray-900 py-12;
 }
 
 .hero {
-    max-width: 130rem;
-    margin: 0 auto;
-    padding: 0 3.2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 9.6rem;
-    align-items: center;
+    @apply max-w-screen-xl mx-auto px-8 grid grid-cols-2 gap-24 items-center;
 }
 
 .hero-description {
-    font-size: 2rem;
-    line-height: 1.6;
-    margin-bottom: 4.8rem;
+    @apply text-lg leading-relaxed mb-12;
 }
 
 .hero-btn-div {
-    justify-content: start;
+    @apply justify-start;
 }
-
 
 /**************************/
 /* FEATURED IN SECTION */
 /**************************/
 
 .section-featured {
-    padding: 4.8rem 0 3.2rem 0;
+    @apply py-12;
 }
 
 .heading-featured-in {
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    letter-spacing: 0.75px;
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 2.4rem;
-    color: #888;
+    @apply text-sm uppercase tracking-widest font-medium text-center mb-6 text-gray-500;
 }
 
 .logos {
-    display: flex;
-    justify-content: space-around;
+    @apply flex justify-around;
 }
 
 .logos img {
-    height: 3.2rem;
-    filter: brightness(0);
-    opacity: 50%;
+    @apply h-8 filter brightness-0 opacity-50;
 }
 
 /**************************/
@@ -146,251 +91,138 @@
 /**************************/
 
 .zigzag {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 40px;
+    @apply flex flex-wrap items-center mb-10;
 }
 
 .zigzag:nth-child(odd) .content {
-    order: 2;
+    @apply order-2;
 }
 
 .zigzag:nth-child(odd) .map-container {
-    order: 1;
+    @apply order-1;
 }
 
 .zigzag:nth-child(even) .content {
-    order: 1;
+    @apply order-1;
 }
 
 .zigzag:nth-child(even) .map-container {
-    order: 2;
+    @apply order-2;
 }
 
-.zigzag .content {
-    flex: 1;
-    padding: 20px;
-}
-
+.zigzag .content,
 .zigzag .map-container {
-    flex: 1;
-    padding: 20px;
+    @apply flex-1 p-5;
 }
 
 .map-container iframe {
-    max-width: 100%;
-    max-height: 100%;
+    @apply max-w-full max-h-full;
 }
 
 .list-unstyled {
-    padding-left: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+    @apply pl-0 list-none flex flex-wrap;
 }
-
 
 /**************************/
 /* PRODUCTS SECTION */
 /**************************/
 
 .section-products {
-    text-align: center;
+    @apply text-center;
 }
 
 .carousel-image {
-    max-height: 400px;
-    /* Adjust as needed */
-    object-fit: cover;
-    /* or contain, depending on how you want the image to fit */
+    @apply max-h-96 object-cover;
 }
 
 .carousel-text {
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent background for better text visibility */
-    padding: 10px;
-    border-radius: 5px;
+    @apply bg-black bg-opacity-50 p-2.5 rounded;
 }
 
-
-/* Make the arrow chevrons bolder and black */
-.carousel-control-prev-icon::before {
-    border-right: 0.3em solid black;
-    /* Adjust thickness and color */
-    border-bottom: 0.3em solid black;
-    /* Adjust thickness and color */
-    transform: translateX(0.25em) rotate(135deg);
-    /* Adjust position and angle */
-}
-
-.carousel-control-next-icon::before {
-    border-left: 0.3em solid black;
-    /* Adjust thickness and color */
-    border-bottom: 0.3em solid black;
-    /* Adjust thickness and color */
-    transform: translateX(-0.25em) rotate(-135deg);
-    /* Adjust position and angle */
-}
-
-.carousel-control-next-icon:after{
-  content: '>';
-  font-size: 55px;
-  color: #232323;
-  background-color: #ffeb3b;
-  border: none;
-  /* Remove default border */
-  padding: 10px;
-  /* Adjust padding to control size of the background */
-  border-radius: 50%;
-  /* Make the background circular */
-  width: 2em;
-  /* Adjust size of the background circle */
-  height: 2em;
-}
-
+.carousel-control-next-icon:after,
 .carousel-control-prev-icon:after {
-  content: '<';
-  font-size: 55px;
-  color: #232323;
-  background-color: #ffeb3b;
-  border: none;
-  /* Remove default border */
-  padding: 10px;
-  /* Adjust padding to control size of the background */
-  border-radius: 50%;
-  /* Make the background circular */
-  width: 2em;
-  /* Adjust size of the background circle */
-  height: 2em;
-
+    @apply text-4xl text-gray-900 bg-yellow-400 rounded-full w-8 h-8 flex items-center justify-center;
 }
 
 .carousel-control-prev:focus,
 .carousel-control-next:focus {
-    outline: none;
-    box-shadow: none;
+    @apply outline-none shadow-none;
 }
 
 .grid-why-div h3 {
-    color: #dfac14;
+    @apply text-yellow-500;
 }
 
 /**************************/
 /* HOURS SECTION */
 /**************************/
 
-/* General Table Styles */
 .styled-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 1.5rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    text-align: center;
-}
-
-.styled-table thead th {
-    pointer-events: none;
+    @apply w-full border-collapse my-6 text-lg shadow-lg text-center;
 }
 
 .holidays-list {
-    list-style: georgian;
-    text-align: justify;
-}
-
-.styled-table thead th {
-    pointer-events: none;
+    @apply list-decimal text-justify;
 }
 
 #calendar-container {
-    width: 300px;
-    margin: 0 auto;
-    text-align: center;
+    @apply w-72 mx-auto text-center;
 }
 
 #calendar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+    @apply flex justify-between items-center mb-2.5;
 }
 
 .calendar-month {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @apply flex flex-col items-center;
 }
 
 .calendar-days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
+    @apply grid grid-cols-7 gap-1.5;
 }
 
 .calendar-day {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
+    @apply border border-gray-300 p-2 text-center;
 }
 
 .current-day {
-    background-color: #ffeb3b;
+    @apply bg-yellow-300;
 }
 
 .holiday {
-    background-color: #dfac14;
+    @apply bg-yellow-500;
 }
 
 .btn-month {
-    background: transparent;
-    border: none;
-    color: #333;
-    font-size: medium;
-    font-weight: 700;
+    @apply bg-transparent border-none text-gray-800 text-sm font-bold;
 }
 
 .legend {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    /* Center the legend section */
-    flex-direction: column;
-    align-items: center;
+    @apply mt-5 flex flex-col items-center;
 }
 
 .legend h3 {
-    margin-bottom: 15px;
-    text-align: center;
+    @apply mb-4 text-center;
 }
 
 .legend ul {
-    padding-left: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
+    @apply pl-0 flex flex-col items-start;
 }
 
 .legend li {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
+    @apply mb-2 flex items-center;
 }
 
 .legend-icon {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+    @apply inline-block w-5 h-5 mr-2;
 }
 
 .legend-icon.current-day {
-    background-color: #ffeb3b;
+    @apply bg-yellow-300;
 }
 
 .legend-icon.holiday {
-    background-color: #dfac14;
+    @apply bg-yellow-500;
 }
 
 /**************************/
@@ -398,9 +230,7 @@
 /**************************/
 
 .grid-contacts-div {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Equal width columns on wider screens */
-    gap: 30px; /* Adjust the gap between columns */
+    @apply grid grid-cols-2 gap-7;
 }
 
 /**************************/
@@ -408,51 +238,41 @@
 /**************************/
 
 .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    @apply bg-gray-800 text-white py-5 text-center;
 }
 
 .footer-grid {
-    grid-template-columns: repeat(1, 1fr);
+    @apply grid grid-cols-1;
 }
 
 .footer img.logo {
-    height: 40px;
+    @apply h-10;
 }
 
 .social-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    margin: 20px 0;
-    justify-content: center;
+    @apply list-none p-0 flex my-5 justify-center;
 }
 
 .social-links li {
-    margin: 0 10px;
+    @apply mx-2.5;
 }
 
 .social-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
+    @apply text-white no-underline text-xl;
 }
 
 .social-links a:hover {
-    color: #ffc107;
+    @apply text-yellow-400;
 }
 
 .contacts {
-    margin-top: 20px;
+    @apply mt-5;
 }
 
 .footer-link {
-    color: #fff;
-    text-decoration: none;
+    @apply text-white no-underline;
 }
 
 .footer-link:hover {
-    color: #ffc107;
+    @apply text-yellow-400;
 }

@@ -1,328 +1,251 @@
-/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+/* Tailwind-based Responsive Design */
 
 /**************************/
 /* BELOW 1344px (Smaller desktops) */
 /**************************/
-
-@media (max-width: 84em) {
+@media (max-width: 1344px) {
     .hero {
-        max-width: 120rem;
+        @apply max-w-screen-lg;
     }
 
     .heading-primary {
-        font-size: 4.4rem;
+        @apply text-5xl;
     }
 
     .gallery {
-        grid-template-columns: repeat(2, 1fr);
+        @apply grid grid-cols-2;
     }
 }
 
 /**************************/
 /* BELOW 1200px (Landscape Tablets) */
 /**************************/
-
-@media (max-width: 75em) {
+@media (max-width: 1200px) {
     html {
-        /* 9px / 16px  */
-        font-size: 56.25%;
+        @apply text-[56.25%]; /* 9px / 16px */
     }
 
     .grid {
-        column-gap: 4.8rem;
-        row-gap: 6.4rem;
+        @apply gap-x-12 gap-y-16;
     }
 
     .heading-secondary {
-        font-size: 3.6rem;
+        @apply text-4xl;
     }
 
     .heading-tertiary {
-        font-size: 2.4rem;
+        @apply text-2xl;
     }
 
     .header {
-        padding: 0 3.2rem;
-        z-index: 10;
+        @apply px-8 z-10;
     }
 
     .main-nav-list {
-        gap: 3.2rem;
+        @apply gap-8;
     }
 
     .testimonials-container {
-        padding: 9.6rem 3.2rem;
+        @apply py-24 px-8;
     }
 
     .section-hero {
-        padding-top: 6rem; /* Add spacing to prevent overlap */
+        @apply pt-24;
     }
 }
 
 /**************************/
 /* BELOW 944px (Tablets) */
 /**************************/
-
-@media (max-width: 62em) {
+@media (max-width: 944px) {
     .grid--5-cols {
-        grid-template-columns: repeat(2, 1fr);
+        @apply grid-cols-2;
     }
-    
-    .main-h1, .main-p, .hero-img-box, .hero-btn-div {
-        text-align: center;
-        justify-content: center;
+
+    .main-h1,
+    .main-p,
+    .hero-img-box,
+    .hero-btn-div {
+        @apply text-center justify-center;
     }
 
     html {
-        /* 8px / 16px = 0.5 = 50% */
-        font-size: 50%;
+        @apply text-[50%]; /* 8px / 16px */
     }
 
     .hero {
-        grid-template-columns: 1fr;
-        padding: 0 8rem;
-        gap: 6.4rem;
-        margin-top: 8rem; /* Add spacing below header */
+        @apply grid-cols-1 px-32 gap-16 mt-32;
     }
 
     .hero-text-box,
     .hero-img-box {
-        text-align: center;
+        @apply text-center;
     }
 
     .hero-img {
-        width: 60%;
+        @apply w-3/5;
     }
 
     .btn-mobile-nav {
-        display: block;
-        z-index: 9999;
+        @apply block z-[9999];
     }
 
     .main-nav {
-        background-color: rgba(35, 35, 35, 0.97);
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        transform: translateX(100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.5s ease-in;
-        z-index: 1000;
-
-        opacity: 0;
-        pointer-events: none;
-        visibility: hidden;
+        @apply bg-gray-900 fixed top-0 left-0 w-full h-screen flex items-center justify-center transition-all ease-in z-[1000] opacity-0 pointer-events-none invisible translate-x-full;
     }
 
     .nav-open .main-nav {
-        opacity: 1;
-        pointer-events: auto;
-        visibility: visible;
-        transform: translateX(0);
+        @apply opacity-100 pointer-events-auto visible translate-x-0;
     }
 
     .nav-open .icon-mobile-nav[name="close-outline"] {
-        display: block;
-        color: #ffc107;
+        @apply block text-yellow-400;
     }
 
     .nav-open .icon-mobile-nav[name="menu-outline"] {
-        display: none;
+        @apply hidden;
     }
 
     .main-nav-list {
-        flex-direction: column;
-        gap: 4.8rem;
+        @apply flex-col gap-12;
     }
 
     .main-nav-link:link,
     .main-nav-link:visited {
-        font-size: 3rem;
+        @apply text-3xl;
     }
 
     .section-hero {
-        padding-top: 8rem; /* Space for sticky navigation */
+        @apply pt-32;
     }
 
     .section-about-us {
-        text-align: justify;
+        @apply text-justify;
     }
 
     .zigzag {
-        flex-direction: column;
+        @apply flex-col;
     }
 
-    .zigzag .content, .zigzag .map-container {
-        order: 0; /* Reset order for stacking */
-        width: 100%; /* Ensure full width */
-        padding: 10px; /* Adjust padding for smaller screens */
+    .zigzag .content,
+    .zigzag .map-container {
+        @apply order-none w-full p-2.5;
     }
 
     .map-container iframe {
-        height: 300px;
+        @apply h-72;
     }
 }
 
 /**************************/
 /* BELOW 704px (Smaller tablets) */
 /**************************/
-
-@media (max-width: 44em) {
+@media (max-width: 704px) {
     .grid--3-cols,
     .grid--4-cols {
-        grid-template-columns: repeat(2, 1fr);
+        @apply grid-cols-2;
     }
 
     .diets {
-        grid-column: 1 / -1;
-        justify-self: center;
+        @apply col-span-full justify-self-center;
     }
 
     .heading-secondary {
-        margin-bottom: 4.8rem;
+        @apply mb-12;
     }
 
     .pricing-plan {
-        width: 100%;
+        @apply w-full;
     }
 
     .grid--footer {
-        grid-template-columns: repeat(6, 1fr);
+        @apply grid-cols-6;
     }
 
     .logo-col {
-        grid-column: span 1;
+        @apply col-span-1;
     }
 
     .nav-col {
-        grid-row: 1;
-        grid-column: span 2;
-        margin-bottom: 3.2rem;
+        @apply row-span-1 col-span-2 mb-8;
     }
 }
 
 /**************************/
 /* BELOW 544px (Phones) */
 /**************************/
-
-@media (max-width: 34em) {
+@media (max-width: 544px) {
     .grid {
-        row-gap: 4.8rem;
+        @apply gap-y-12;
     }
 
     .grid--2-cols,
     .grid--3-cols,
     .grid--4-cols,
     .grid--5-cols {
-        grid-template-columns: 1fr;
+        @apply grid-cols-1;
     }
 
     .btn,
     .btn:link,
     .btn:visited {
-        padding: 2.4rem 1.6rem;
+        @apply py-6 px-4;
     }
 
     .section-hero {
-        padding: 2.4rem 0 6.4rem 0;
+        @apply py-6 px-0;
     }
 
     .hero {
-        padding: 0 3.2rem;
+        @apply px-8;
     }
 
     .hero-img {
-        width: 80%;
+        @apply w-4/5;
     }
 
     .logos img {
-        height: 1.2rem;
+        @apply h-3;
     }
 
     .testimonials {
-        grid-template-columns: 1fr;
+        @apply grid-cols-1;
     }
 
     .gallery {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1.2rem;
+        @apply grid-cols-4 gap-3;
     }
 
     .cta {
-        grid-template-columns: 1fr;
+        @apply grid-cols-1;
     }
 
     .cta-text-box {
-        padding: 3.2rem;
+        @apply p-8;
     }
 
     .cta-img-box {
-        height: 32rem;
-        grid-row: 1;
+        @apply h-80 row-span-1;
     }
 }
-
-/* 
-  - Font sizes (px)
-  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-  
-  - Spacing system (px)
-  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-  */
 
 /**************************/
 /* Fixing Safari flexbox gap */
 /**************************/
-
 .no-flexbox-gap .main-nav-list li:not(:last-child) {
-    margin-right: 4.8rem;
+    @apply mr-12;
 }
 
-.no-flexbox-gap .list-item:not(:last-child) {
-    margin-bottom: 1.6rem;
-}
-
-.no-flexbox-gap .list-icon:not(:last-child) {
-    margin-right: 1.6rem;
-}
-
-.no-flexbox-gap .delivered-faces {
-    margin-right: 1.6rem;
-}
-
-.no-flexbox-gap .meal-attribute:not(:last-child) {
-    margin-bottom: 2rem;
-}
-
-.no-flexbox-gap .meal-icon {
-    margin-right: 1.6rem;
-}
-
-.no-flexbox-gap .footer-row div:not(:last-child) {
-    margin-right: 6.4rem;
-}
-
-.no-flexbox-gap .social-links li:not(:last-child) {
-    margin-right: 2.4rem;
-}
-
+.no-flexbox-gap .list-item:not(:last-child),
+.no-flexbox-gap .meal-attribute:not(:last-child),
 .no-flexbox-gap .footer-nav li:not(:last-child) {
-    margin-bottom: 2.4rem;
+    @apply mb-6;
 }
 
-@media (max-width: 75em) {
-    .no-flexbox-gap .main-nav-list li:not(:last-child) {
-        margin-right: 3.2rem;
-    }
-}
-
-@media (max-width: 59em) {
-    .no-flexbox-gap .main-nav-list li:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 4.8rem;
-    }
+.no-flexbox-gap .list-icon:not(:last-child),
+.no-flexbox-gap .meal-icon,
+.no-flexbox-gap .delivered-faces,
+.no-flexbox-gap .social-links li:not(:last-child),
+.no-flexbox-gap .footer-row div:not(:last-child) {
+    @apply mr-4;
 }

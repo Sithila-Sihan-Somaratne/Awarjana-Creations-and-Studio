@@ -2,576 +2,642 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Sithila Sihan Somaratne">
-    <meta name="keyword"
-        content="Awarjana Creations, Awarjana Creations and Studio, Sri Lankan printing, Awarjana printing, printing">
-    <meta name="description"
-        content="Awarjana Creation and Studio is a Sri Lankan printing shop where you can demand many things from its magic!">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/query.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-    <link rel="icon" href="images/logo.png">
-    <title>Awarjana Creations and Studio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sithila Sihan Somaratne">
+  <meta name="keywords"
+    content="Awarjana Creations, Awarjana Creations and Studio, Sri Lankan printing, Awarjana printing, printing">
+  <meta name="description"
+    content="Awarjana Creation and Studio is a Sri Lankan printing shop where you can demand many things from its magic!">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="images/logo.png">
+  <title>Awarjana Creations and Studio</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body>
-    <header id="#" class="header">
-        <a href="#">
-            <img class="logo" src="images/logo.png" alt="Awarjana Icon">
-        </a>
-        <nav class="main-nav">
-            <ul class="main-nav-list">
-                <li><a class="main-nav-link" href="#about_us" data-translate="ABOUT US">ABOUT US</a></li>
-                <li><a class="main-nav-link" href="#products" data-translate="PRODUCTS">PRODUCTS</a></li>
-                <li><a class="main-nav-link" href="#why_us" data-translate="WHY US">WHY US</a></li>
-                <li><a class="main-nav-link" href="#hours" data-translate="HOURS">HOURS</a></li>
-                <li><a class="main-nav-link" href="#contacts" data-translate="CONTACTS">CONTACTS</a></li>
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img height="60px" src="images/languages.png" alt="Sinhala and English Languages Icon">
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#" data-lang="si" onclick="console.log('Sinhala clicked'); setLanguage('si');"><img height="30px" src="images/sinhala.png"
-                                    alt="Sinhala Languages Icon">සිංහල</a></li>
-                        <li><a class="dropdown-item" href="#" data-lang="en" onclick="console.log('English clicked'); setLanguage('en');"><img height="30px" src="images/english.png"
-                                    alt="Englsih Languages Icon">English</a></li>
-                    </ul>
-                </div>
-            </ul>
-        </nav>
-        <button class="btn-mobile-nav">
-            <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-            <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-4 shadow bg-gray-950 sticky top-0 z-50">
+    <a href="#">
+      <img class="h-14 w-auto" src="images/logo.png" alt="Awarjana Icon">
+    </a>
+    <nav class="hidden md:flex space-x-8 items-center">
+      <a class="hover:text-yellow-400 transition" href="#about_us" data-translate="ABOUT US">ABOUT US</a>
+      <a class="hover:text-yellow-400 transition" href="#products" data-translate="PRODUCTS">PRODUCTS</a>
+      <a class="hover:text-yellow-400 transition" href="#why_us" data-translate="WHY US">WHY US</a>
+      <a class="hover:text-yellow-400 transition" href="#hours" data-translate="HOURS">HOURS</a>
+      <a class="hover:text-yellow-400 transition" href="#contacts" data-translate="CONTACTS">CONTACTS</a>
+      <div class="relative group">
+        <button class="flex items-center space-x-1 focus:outline-none">
+          <img class="h-8" src="images/languages.png" alt="Languages">
+          <ion-icon name="chevron-down-outline"></ion-icon>
         </button>
-    </header>
-    <section class="section-hero">
-        <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row align-items-center g-5 py-5">
-                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
-                    <h1 class="display-1 fw-bold text-light main-h1" data-translate="Get what you need with Awarjana!">
-                        Get
-                        what you need with Awarjana!</h1>
-                    <br>
-                    <p class="fs-3 lead text-light main-p"
-                        data-translate="At Awarjana Creations and Studio, we believe in the power of creativity and innovation. Our mission is to bring your ideas to life through exceptional design and craftsmanship. Whether you're looking for bespoke artwork, custom designs, or professional studio services, we are here to exceed your expectations.">
-                        At Awarjana Creations and Studio, we believe in the power of
-                        creativity and innovation. Our mission is to bring your ideas to life through exceptional design
-                        and craftsmanship. Whether you're looking for bespoke artwork, custom designs, or professional
-                        studio services, we are here to exceed your expectations.
-                    </p> <br>
-                    <div class="hero-btn-div d-grid gap-4 d-md-flex">
-                        <button type="button" class="btn-hero btn btn-warning btn-lg px-4"><a
-                                class="link-dark text-decoration-none" href="#contacts"
-                                data-translate="Contact us right now!">Contact
-                                us right now!</a></button>
-                        <button type="button" class="btn-hero btn btn-outline-warning btn-lg px-4"><a
-                                style="color: inherit;" class="text-decoration-none" href="#about_us"
-                                data-translate="Learn more ↓">Learn more
-                                &downarrow;</a></button>
-                    </div>
-                    <br>
-                </div>
-                <div class="col-lg-6 hero-img-box" data-aos="fade-left" data-aos-duration="1000">
-                    <img alt="Awarjana Creations Shop" src="images/hero2.jpg" class="img-fluid rounded" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section-featured" data-aos="fade-up" data-aos-duration="1000">
-        <div class="container">
-            <h2 class="heading heading-featured-in" data-translate="Trusted by">Trusted by</h2><br>
-            <div class="logos">
-                <img src="images/logo.png" alt="Techcrunch logo" />
-                <img src="images/logo.png" alt="Business Insider logo" />
-                <img src="images/logo.png" alt="The New York Times logo" />
-                <img src="images/logo.png" alt="Forbes logo" />
-                <img src="images/logo.png" alt="USA Today logo" />
-            </div>
-        </div>
-    </section>
-    <hr>
-    <section id="about_us" class="section-about-us">
-        <div class="container">
-            <h2 class="heading-section" data-aos="fade-down" data-aos-duration="1000" data-translate="About us">About
-                us</h2>
+        <ul
+          class="absolute right-0 mt-2 w-32 bg-gray-800 rounded shadow-lg hidden group-hover:block transition duration-200">
+          <li>
+            <a href="#" class="flex items-center px-4 py-2 hover:bg-yellow-400 hover:text-black"
+              onclick="setLanguage('si');">
+              <img class="h-5 mr-2" src="images/sinhala.png" alt="Sinhala">සිංහල
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center px-4 py-2 hover:bg-yellow-400 hover:text-black"
+              onclick="setLanguage('en');">
+              <img class="h-5 mr-2" src="images/english.png" alt="English">English
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <button class="md:hidden flex flex-col justify-center items-center w-10 h-10" id="btn-mobile-nav">
+      <ion-icon class="text-3xl" name="menu-outline"></ion-icon>
+    </button>
+  </header>
+  <!-- Mobile nav -->
+  <nav id="mobile-nav"
+    class="fixed inset-0 bg-gray-950 bg-opacity-95 z-50 flex flex-col items-center justify-center space-y-6 text-2xl hidden">
+    <a href="#about_us" class="hover:text-yellow-400" onclick="toggleMobileNav()">ABOUT US</a>
+    <a href="#products" class="hover:text-yellow-400" onclick="toggleMobileNav()">PRODUCTS</a>
+    <a href="#why_us" class="hover:text-yellow-400" onclick="toggleMobileNav()">WHY US</a>
+    <a href="#hours" class="hover:text-yellow-400" onclick="toggleMobileNav()">HOURS</a>
+    <a href="#contacts" class="hover:text-yellow-400" onclick="toggleMobileNav()">CONTACTS</a>
+    <div class="flex space-x-4">
+      <button onclick="setLanguage('si');"
+        class="flex items-center px-2 py-1 bg-gray-800 rounded hover:bg-yellow-400 hover:text-black">
+        <img class="h-5 mr-1" src="images/sinhala.png" alt="Sinhala">සිංහල
+      </button>
+      <button onclick="setLanguage('en');"
+        class="flex items-center px-2 py-1 bg-gray-800 rounded hover:bg-yellow-400 hover:text-black">
+        <img class="h-5 mr-1" src="images/english.png" alt="English">English
+      </button>
+    </div>
+    <button onclick="toggleMobileNav()" class="absolute top-8 right-8 text-3xl">
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+  </nav>
 
-            <div class="zigzag" data-aos="fade-right" data-aos-duration="1000">
-                <div class="content">
-                    <h3 class="display-3 fw-bold" data-translate="Our Story">Our Story</h3>
-                    <p class="fs-4 lead"
-                        data-translate="Welcome to Awarjana Creations and Studio, where creativity meets commitment. Established on October 22, 2011, we have been proudly serving our clients with passion, integrity, and efficiency for over a decade.">
-                        Welcome to Awarjana Creations and Studio, where creativity meets commitment. Established on
-                        October 22, 2011, we have been proudly serving our clients with passion, integrity, and
-                        efficiency for over a decade.
-                    </p>
-                </div>
-                <div class="map-container">
-                </div>
-            </div>
-
-            <div class="zigzag" data-aos="fade-left" data-aos-duration="1000">
-                <div class="map-container">
-                </div>
-                <div class="content">
-                    <h3 class="display-3 fw-bold" data-translate="Our Mission & Client Focus">Our Mission & Client
-                        Focus</h3>
-                    <p class="fs-4 lead"
-                        data-translate="Since our inception, our mission has remained clear: to deliver legal, customer-friendly, and fast services that not only meet but exceed expectations. Our dedication to quality and our customer-first approach have earned us the trust and love of our growing client base.">
-                        Since our inception, our mission has remained clear: to deliver legal, customer-friendly, and
-                        fast services that not only meet but exceed expectations. Our dedication to quality and our
-                        customer-first approach have earned us the trust and love of our growing client base.
-                    </p>
-                </div>
-            </div>
-
-            <div class="zigzag" data-aos="fade-right" data-aos-duration="1000">
-                <div class="map-container">
-                </div>
-                <div class="content">
-                    <h3 class="display-3 fw-bold" data-translate="Our Values & Approach">Our Values & Approach</h3>
-                    <p class="fs-4 lead" data-translate="At Awarjana, we believe in building relationships that last—powered by transparency, professionalism, and a relentless pursuit of excellence. Whether you're a returning client or visiting us for the first time, we're here to provide solutions tailored to your needs with a touch of creativity and a heart full of care.
-Experience the Awarjana difference—where service is not just a promise, but a tradition.">
-                        At Awarjana, we believe in building relationships that last—powered by transparency,
-                        professionalism, and a relentless pursuit of excellence. Whether you're a returning client or
-                        visiting us for the first time, we're here to provide solutions tailored to your needs with a
-                        touch of creativity and a heart full of care.
-                        Experience the Awarjana difference—where service is not just a promise, but a tradition.
-                    </p>
-                </div>
-            </div>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-yellow-600/60 to-yellow-700/60 py-16">
+    <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
+      <div class="lg:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+        <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 main-h1"
+          data-translate="Get what you need with Awarjana!">
+          Get what you need with Awarjana!
+        </h1>
+        <p class="text-lg md:text-2xl text-gray-100 mb-8 main-p"
+          data-translate="At Awarjana Creations and Studio, we believe in the power of creativity and innovation. Our mission is to bring your ideas to life through exceptional design and craftsmanship. Whether you're looking for bespoke artwork, custom designs, or professional studio services, we are here to exceed your expectations.">
+          At Awarjana Creations and Studio, we believe in the power of
+          creativity and innovation. Our mission is to bring your ideas to life through exceptional design
+          and craftsmanship. Whether you're looking for bespoke artwork, custom designs, or professional
+          studio services, we are here to exceed your expectations.
+        </p>
+        <div class="flex gap-4 flex-col sm:flex-row">
+          <a href="#contacts"
+            class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-3 rounded shadow transition text-lg"
+            data-translate="Contact us right now!">
+            Contact us right now!
+          </a>
+          <a href="#about_us"
+            class="border border-yellow-400 hover:bg-yellow-400 hover:text-black text-yellow-400 font-bold px-8 py-3 rounded shadow transition text-lg"
+            data-translate="Learn more ↓">
+            Learn more &darr;
+          </a>
         </div>
-    </section>
-    <hr>
-    <section id="products" class="section-products">
-        <div class="container">
-            <h2 class="heading-section" data-aos="fade-down" data-aos-duration="1000" data-translate="Our products">
-                Our products</h2>
-            <h2 class="display-2 fw-bold" data-aos="fade-down" data-aos-duration="1000"
-                data-translate="Your satisfaction is our top priority. Let us help you create something special.">Your
-                satisfaction is our top
-                priority. <br>Let us help you create something
-                special.</h2>
-            <p class="fs-4 lead" data-aos="fade-down" data-aos-duration="1000"
-                data-translate="Explore our wide range of products designed to meet all your needs:">Explore our wide
-                range of products
-                designed to meet all your needs:</p>
-            <div id="productsCarousel" class="carousel slide" data-bs-ride="carousel" data-aos="zoom-in"
-                data-aos-duration="1000">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="images/hero2.jpg" alt="Digital printing"
-                            class="d-block w-100 img-fluid carousel-image">
-                        <div class="carousel-caption d-none d-md-block carousel-text">
-                            <h5 class="fs-1 fw-bold product-row-heading" data-translate="Digital printing">Digital
-                                printing</h5>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/hero2.jpg" alt="Photo printing" class="d-block w-100 img-fluid carousel-image">
-                        <div class="carousel-caption d-none d-md-block carousel-text">
-                            <h5 class="fs-1 fw-bold product-row-heading" data-translate="Photo printing">Photo
-                                printing</h5>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/hero2.jpg" alt="Mug printing" class="d-block w-100 img-fluid carousel-image">
-                        <div class="carousel-caption d-none d-md-block carousel-text">
-                            <h5 class="fs-1 fw-bold product-row-heading" data-translate="Mug printing">Mug printing</h5>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/hero2.jpg" alt="Visiting cards" class="d-block w-100 img-fluid carousel-image">
-                        <div class="carousel-caption d-none d-md-block carousel-text">
-                            <h5 class="fs-1 fw-bold product-row-heading" data-translate="Visiting cards">Visiting
-                                cards</h5>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/hero2.jpg" alt="Wedding cards" class="d-block w-100 img-fluid carousel-image">
-                        <div class="carousel-caption d-none d-md-block carousel-text">
-                            <h5 class="fs-1 fw-bold product-row-heading" data-translate="Wedding cards">Wedding
-                                cards</h5>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/hero2.jpg" alt="Rubber/Flash Seals"
-                            class="d-block w-100 img-fluid carousel-image">
-                        <div class="carousel-caption d-none d-md-block carousel-text">
-                            <h5 class="fs-1 fw-bold product-row-heading" data-translate="Rubber/Flash Seals">
-                                Rubber/Flash
-                                Seals</h5>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#productsCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#productsCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-    </section>
-    <hr>
-    <section id="why_us" class="section-why-us">
-        <div class="container">
-            <h2 class="heading-section" data-aos="fade-down" data-aos-duration="1000"
-                data-translate="Why us and benefits">
-                Why us and benefits</h2>
-            <h2 class="display-4 fw-semibold" data-aos="fade-down" data-aos-duration="1000"
-                data-translate="Why Choose Awarjana Creations and Studio?">Why Choose Awarjana
-                Creations and Studio?</h2>
-            <p class="fs-4 lead" data-aos="fade-down" data-aos-duration="1000"
-                data-translate="At Awarjana Creations and Studio, we don't just offer services—we deliver trust, quality, and a seamless experience. Here's why so many customers continue to choose us:">
-                At Awarjana Creations and Studio, we
-                don't just offer services—we deliver trust,
-                quality, and a seamless experience. Here's why so many customers continue to choose us:</p>
-            <div class="container grid grid-why-div grid--5-cols">
-                <div class="row" data-aos="fade-up" data-aos-duration="1000">
-                    <h3 class="fs-1" data-translate="Over a Decade of Experience"><i
-                            class="why-us-icons fa-solid fa-calendar-days"></i> Over a Decade of Experience
-                    </h3>
-                    <p class="fs-4 lead"
-                        data-translate="Since 2011, we've built a strong reputation for reliability and excellence. Our long-standing presence reflects our commitment to doing things the right way—legally, ethically, and efficiently.">
-                        Since 2011, we've built a strong reputation for reliability and excellence. Our
-                        long-standing
-                        presence reflects our commitment to doing things the right way—legally, ethically, and
-                        efficiently.</p>
-                </div>
-                <div class="row" data-aos="fade-up" data-aos-duration="1000">
-                    <h3 class="fs-1" data-translate="Customer-Centric Approach"><i
-                            class="why-us-icons fa-solid fa-user"></i> Customer-Centric Approach</h3>
-                    <p class="fs-4 lead"
-                        data-translate="Your satisfaction is our top priority. We listen, we care, and we tailor our services to meet your unique needs. With friendly support and clear communication, we ensure you always feel valued.">
-                        Your satisfaction is our top priority. We listen, we care, and we tailor our
-                        services to meet
-                        your unique needs. With friendly support and clear communication, we ensure you always feel
-                        valued.</p>
-                </div>
-                <div class="row" data-aos="fade-up" data-aos-duration="1000">
-                    <h3 class="fs-1" data-translate="Fast and Efficient Service"><i
-                            class="why-us-icons fa-solid fa-bolt"></i> Fast and Efficient Service</h3>
-                    <p class="fs-4 lead"
-                        data-translate="We respect your time. Our streamlined processes are designed to deliver fast turnarounds without compromising quality—so you get what you need, when you need it.">
-                        We respect your time. Our streamlined processes are designed to deliver fast
-                        turnarounds without
-                        compromising quality—so you get what you need, when you need it.</p>
-                </div>
-                <div class="row" data-aos="fade-up" data-aos-duration="1000">
-                    <h3 class="fs-1" data-translate="Professionalism with a Creative Touch"><i
-                            class="why-us-icons fa-solid fa-lightbulb"></i> Professionalism with a Creative
-                        Touch</h3>
-                    <p class="fs-4 lead"
-                        data-translate="We blend professionalism with creativity to bring your ideas to life. Whether it's a creative project or a technical service, we approach every task with passion and precision.">
-                        We blend professionalism with creativity to bring your ideas to life. Whether
-                        it's a creative
-                        project or a technical service, we approach every task with passion and precision.</p>
-                </div>
-                <div class="row" data-aos="fade-up" data-aos-duration="1000">
-                    <h3 class="fs-1" data-translate="Trust and Transparency"><i
-                            class="why-us-icons fa-solid fa-shield-halved"></i> Trust and Transparency</h3>
-                    <p class="fs-4 lead"
-                        data-translate="We believe in building lasting relationships based on trust. No hidden charges, no shortcuts—just honest service you can count on.">
-                        We believe in building lasting relationships based on trust. No hidden charges,
-                        no shortcuts—just
-                        honest service you can count on.</p>
-                </div>
-            </div>
-            <br>
-            <h2 class="display-4 fw-semibold" data-aos="fade-down" data-aos-duration="1000"
-                data-translate="The Benefits You Get When You Choose Us">The Benefits You Get When
-                You Choose Us</h2>
-            <p class="fs-4 lead" data-aos="fade-down" data-aos-duration="1000"
-                data-translate="Choosing Awarjana Creations and Studio means gaining more than just a service—it means gaining a trusted partner. Here's what you can expect when you work with us:">
-                Choosing Awarjana Creations and Studio
-                means gaining more than just a service—it means
-                gaining a trusted partner. Here's what you can expect when you work with us:</p>
-            <div class="container grid grid-why-div grid--3-cols">
-                <div class="row" data-aos="fade-up" data-aos-duration="1000">
-                    <h3 class="fs-1" data-translate="Peace of Mind"><i
-                            class="why-us-icons fa-solid fa-check-circle"></i>
-                        Peace of Mind</h3>
-                    <p class="fs-4 lead"
-                        data-translate="Our legal and transparent processes ensure you never have to worry about hidden issues or surprises. You can relax, knowing everything is handled the right way.">
-                        Our legal and transparent processes ensure you never have to worry about hidden
-                        issues or surprises. You can relax, knowing everything is handled the right way.</p>
-                </div>
-                <div class="row" data-aos="fade-up" data-aos-duration="1000">
-                    <h3 class="fs-1" data-translate="Speed Without Stress"><i
-                            class="why-us-icons fa-solid fa-rocket"></i>
-                        Speed Without Stress</h3>
-                    <p class="fs-4 lead"
-                        data-translate="We deliver results quickly, without cutting corners. Our efficient systems make sure you get what you need—fast and hassle-free.">
-                        We deliver results quickly, without cutting corners. Our efficient systems make
-                        sure you get what you need—fast and hassle-free.</p>
-                </div>
-                <div class="row" data-aos="fade-up" data-aos-duration="1000">
-                    <h3 class="fs-1" data-translate="Friendly, Personalized Service"><i
-                            class="why-us-icons fa-solid fa-heart"></i> Friendly, Personalized Service</h3>
-                    <p class="fs-4 lead"
-                        data-translate="We treat every client like family. You'll always be met with respect, clear communication, and service tailored to your specific needs.">
-                        We treat every client like family. You'll always be met with respect, clear
-                        communication, and service tailored to your specific needs.</p>
-                </div>
-                <div class="row" data-aos="fade-up" data-aos-duration="1000">
-                    <h3 class="fs-1" data-translate="Proven Experience & Reliability"><i
-                            class="why-us-icons fa-solid fa-award"></i> Proven Experience & Reliability</h3>
-                    <p class="fs-4 lead"
-                        data-translate="With over a decade of consistent performance, our track record speaks for itself. We've earned the trust of countless satisfied customers—and we're ready to earn yours.">
-                        With over a decade of consistent performance, our track record speaks for
-                        itself.
-                        We've earned the trust of countless satisfied customers—and we're ready to earn yours.</p>
-                </div>
-                <div class="row" data-aos="fade-up" data-aos-duration="1000">
-                    <h3 class="fs-1" data-translate="Creative Excellence"><i
-                            class="why-us-icons fa-solid fa-palette"></i>
-                        Creative Excellence</h3>
-                    <p class="fs-4 lead"
-                        data-translate="Whether it's design, media, or branding, we bring fresh ideas to the table. You get innovative solutions backed by technical skill and creative flair.">
-                        Whether it's design, media, or branding, we bring fresh ideas to the table. You
-                        get innovative solutions backed by technical skill and creative flair.</p>
-                </div>
-                <div class="row" data-aos="fade-up" data-aos-duration="1000">
-                    <h3 class="fs-1" data-translate="Long-Term Support"><i
-                            class="why-us-icons fa-solid fa-handshake"></i>
-                        Long-Term Support</h3>
-                    <p class="fs-4 lead"
-                        data-translate="We're with you every step of the way—before, during, and after your project. You'll never feel left behind or out of touch.">
-                        We're with you every step of the way—before, during, and after your project.
-                        You'll never feel left behind or out of touch.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <hr>
-    <section id="hours" class="section-hours">
-        <div class="container">
-            <h2 class="heading-section" data-aos="fade-down" data-aos-duration="1000" data-translate="Hours">Hours</h2>
-            <h2 class="display-2 fw-bold" data-aos="fade-down" data-aos-duration="1000"
-                data-translate="We're open everyday!">We're open everyday!</h2>
-            <p class="fs-4" data-aos="fade-down" data-aos-duration="1000"
-                data-translate="We're open everyday from 8:30 AM to 6:30 PM and we're not open on public holidays.">
-                We're open everyday from 8:30 AM to 6:30 PM
-                and we're not open on public holidays.</p>
-            <table class="styled-table table table-hover table-striped-columns table-warning table-responsive"
-                data-aos="fade-up" data-aos-duration="1000">
-                <thead>
-                    <tr>
-                        <th data-translate="Day/Period">Day/Period</th>
-                        <th data-translate="Opening time">Opening time</th>
-                        <th data-translate="Closing time">Closing time</th>
-                        <th data-translate="Status">Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-translate="Monday">Monday</td>
-                        <td>8:30 A.M.</td>
-                        <td>6:30 P.M.</td>
-                        <td id="monday-status"></td>
-                    </tr>
-                    <tr>
-                        <td data-translate="Tuesday">Tuesday</td>
-                        <td>8:30 A.M.</td>
-                        <td>6:30 P.M.</td>
-                        <td id="tuesday-status"></td>
-                    </tr>
-                    <tr>
-                        <td data-translate="Wednesday">Wednesday</td>
-                        <td>8:30 A.M.</td>
-                        <td>6:30 P.M.</td>
-                        <td id="wednesday-status"></td>
-                    </tr>
-                    <tr>
-                        <td data-translate="Thursday">Thursday</td>
-                        <td>8:30 A.M.</td>
-                        <td>6:30 P.M.</td>
-                        <td id="thursday-status"></td>
-                    </tr>
-                    <tr>
-                        <td data-translate="Friday">Friday</td>
-                        <td>8:30 A.M.</td>
-                        <td>6:30 P.M.</td>
-                        <td id="friday-status"></td>
-                    </tr>
-                    <tr>
-                        <td data-translate="Saturday">Saturday</td>
-                        <td>8:30 A.M.</td>
-                        <td>6:30 P.M.</td>
-                        <td id="saturday-status"></td>
-                    </tr>
-                    <tr>
-                        <td data-translate="Sunday">Sunday</td>
-                        <td>8:30 A.M.</td>
-                        <td>6:30 P.M.</td>
-                        <td id="sunday-status"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <br>
-            <div id="calendar-container" data-aos="fade-up" data-aos-duration="1000"
-                data-translate="calendar_container">
-                <div id="calendar-header" data-translate="calendar_header">
-                    <button class="btn-month" id="prev-month" aria-label="Previous month"
-                        data-translate="prev_month">&lt;</button>
-                    <h4 id="calendar-month-year" data-translate="calendar_month_year"></h4>
-                    <button class="btn-month" id="next-month" aria-label="Next month"
-                        data-translate="next_month">&gt;</button>
-                </div>
-                <div id="holiday-calendar" data-translate="holiday_calendar"></div>
-            </div>
-            <div class="legend" data-aos="fade-up" data-aos-duration="1000" data-translate="legend">
-                <p class="fs-4 lead fw-bold" data-translate="legend_text">Legend:</p>
-                <ul class="list-unstyled fs-4 lead" data-translate="legend_list">
-                    <li><span class="legend-icon current-day" data-translate="current_day_icon"></span> <span
-                            data-translate="current_day">Current Day</span></li>
-                    <li><span class="legend-icon holiday" data-translate="holiday_icon"></span> <span
-                            data-translate="holiday">Holiday</span></li>
-                </ul>
-            </div>
-    </section>
-    <hr>
-    <section id="contacts" class="section-contacts" data-translate="contacts_section">
-        <div class="container" data-translate="contacts_container">
-            <h2 class="heading-section" data-aos="fade-down" data-aos-duration="1000" data-translate="contacts">Contacts
-            </h2>
-            <h2 class="display-2 fw-bold" data-aos="fade-down" data-aos-duration="1000" data-translate="stay_with_us">
-                Stay with us in many ways!</h2>
-            <p class="fs-4 lead" data-aos="fade-down" data-aos-duration="1000" data-translate="get_in_touch">Get in
-                touch with us for any inquiries or
-                to request a quote.</p>
-            <div class="container grid grid-contacts-div grid--2-cols" data-translate="contacts_grid">
-                <div class="row" data-aos="fade-right" data-aos-duration="1000" data-translate="where_to_meet_row">
-                    <h4 class="display-4 fw-semibold mb-2" data-translate="where_to_meet">Where to meet us?</h4>
-                    <p class="fs-4 lead mb-3" data-translate="address">We are in No. 64, Muslim Church Road, 24
-                        Veyangoda Rd, Minuwangoda 11550,
-                        Sri Lanka.</p>
-                    <div class="map-container" data-translate="map_container">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.6282061910965!2d79.94601647478841!3d7.168905915327373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2e5d0fa312f21%3A0x639f574d5aa3ae69!2sAwarjana%20Creations!5e0!3m2!1sit!2sit!4v1746268562734!5m2!1sit!2sit"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-                <div class="row" data-aos="fade-left" data-aos-duration="1000" data-translate="how_to_contact_row">
-                    <h4 class="display-4 fw-semibold mb-2" data-translate="how_to_contact">How to contact us?</h4>
-                    <p class="fs-4 lead mb-3" data-translate="contact_methods">You can contact us in many ways, through
-                        phone and emails!</p>
-                    <div class="d-flex flex-column flex-md-row p-1 gap-1 py-md-1 align-items-center justify-content-center mt-1"
-                        data-translate="contact_list">
-                        <div class="list-group">
-                            <a class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true"
-                                data-translate="whatsapp_link1">
-                                <div class="d-flex gap-2 w-100 justify-content-between">
-                                    <div>
-                                        <h2 class="mb-0"> <i class="contacts-icon fa-brands fa-square-whatsapp fa-xl"
-                                                style="color: #25d366;"></i>
-                                            <span data-translate="phone_number1">+94 077 176 0459</span>
-                                        </h2>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true"
-                                data-translate="whatsapp_link2">
-                                <div class="d-flex gap-2 w-100 justify-content-between">
-                                    <div>
-                                        <h2 class="mb-0"> <i class="contacts-icon fa-brands fa-whatsapp fa-xl"
-                                                style="color: #25d366;"></i>
-                                            </i>
-                                            <span data-translate="phone_number2">+94 077 176 0459</span>
-                                        </h2>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true"
-                                data-translate="phone_link">
-                                <div class="d-flex gap-2 w-100 justify-content-between">
-                                    <div>
-                                        <h2 class="mb-0"><i class="fa-solid fa-phone fa-xl" style="color: blue;"></i>
-                                            <span data-translate="phone_number3">+94 011 228 3020</span>
-                                        </h2>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true"
-                                data-translate="email_link">
-                                <div class="d-flex gap-2 w-100 justify-content-between">
-                                    <div>
-                                        <h2 class="mb-0"><i class="fa-solid fa-envelope fa-xl" style="color: red;"></i>
-                                            <span data-translate="email_address">awarjanacreation1@gmail.com</span>
-                                        </h2>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <footer class="footer" data-translate="footer">
-        <div class="container grid footer-grid" data-translate="footer_grid">
-            <div class="logo-col" data-translate="logo_col">
-                <a href="#" class="footer-logo" data-translate="footer_logo">
-                    <img class="logo" alt="Awarjana logo" src="images/logo.png" data-translate="awarjana_logo" />
-                </a>
+      </div>
+      <div class="lg:w-1/2 flex justify-center" data-aos="fade-left" data-aos-duration="1000">
+        <img alt="Awarjana Creations Shop" src="images/hero2.jpg"
+          class="max-w-md w-full rounded-lg shadow-xl object-cover" loading="lazy">
+      </div>
+    </div>
+  </section>
 
-                <ul class="social-links" data-translate="social_links">
-                    <li>
-                        <a class="footer-link"
-                            onclick='window.open("https://www.youtube.com/watch?v=Py7X9TfyVE0"); return false;'
-                            href="https://www.youtube.com/watch?v=Py7X9TfyVE0" data-translate="youtube_link">
-                            <i class="fab fa-youtube social-icon" data-translate="youtube_icon"></i></a>
-                    </li>
-                    <li>
-                        <a class="footer-link"
-                            onclick='window.open("https://www.facebook.com/p/Awarjana-Creations-100090293863478"); return false;'
-                            href="https://www.facebook.com/p/Awarjana-Creations-100090293863478"
-                            data-translate="facebook_link">
-                            <i class="fab fa-facebook-f social-icon" data-translate="facebook_icon"></i></a>
-                    </li>
-                    <li>
-                        <a class="footer-link"
-                            onclick='window.open("https://www.tiktok.com/@awrjanacreation"); return false;'
-                            href="https://www.tiktok.com/@awrjanacreation" data-translate="tiktok_link">
-                            <i class="fab fa-tiktok social-icon" data-translate="tiktok_icon"></i></a>
-                    </li>
-                    <li>
-                        <a class="footer-link"
-                            onclick='window.open("https://www.pinterest.com/awarjanac/"); return false;'
-                            href="https://www.pinterest.com/awarjanac/" data-translate="pinterest_link">
-                            <i class="fab fa-pinterest-p social-icon" data-translate="pinterest_icon"></i></a>
-                    </li>
-                </ul>
+  <!-- Trusted By Section -->
+  <section class="py-12 bg-gray-950" data-aos="fade-up" data-aos-duration="1000">
+    <div class="container mx-auto px-6">
+      <h2 class="text-2xl font-semibold text-center mb-8" data-translate="Trusted by">Trusted by</h2>
+      <div class="flex flex-wrap justify-center gap-10 items-center">
+        <img src="images/logo.png" alt="Techcrunch logo" class="h-12" />
+        <img src="images/logo.png" alt="Business Insider logo" class="h-12" />
+        <img src="images/logo.png" alt="The New York Times logo" class="h-12" />
+        <img src="images/logo.png" alt="Forbes logo" class="h-12" />
+        <img src="images/logo.png" alt="USA Today logo" class="h-12" />
+      </div>
+    </div>
+  </section>
+  <hr class="border-yellow-400">
 
-                <p class="fs-4 copyright text-light" data-translate="copyright">
-                    Copyright © <span class="year" data-translate="year"></span> by Awarjana Creation and Studio, Inc.
-                    All rights
-                    reserved.
-                </p>
-            </div>
+  <!-- About Us Section -->
+  <section id="about_us" class="py-16 bg-gray-800">
+    <div class="container mx-auto px-6 space-y-12">
+      <h2 class="text-4xl font-bold text-center mb-10" data-aos="fade-down" data-aos-duration="1000"
+        data-translate="About us">About us</h2>
+      <!-- Our Story -->
+      <div class="flex flex-col md:flex-row items-center gap-12" data-aos="fade-right" data-aos-duration="1000">
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-bold mb-4" data-translate="Our Story">Our Story</h3>
+          <p class="text-lg text-gray-200"
+            data-translate="Welcome to Awarjana Creations and Studio, where creativity meets commitment. Established on October 22, 2011, we have been proudly serving our clients with passion, integrity, and efficiency for over a decade.">
+            Welcome to Awarjana Creations and Studio, where creativity meets commitment. Established on
+            October 22, 2011, we have been proudly serving our clients with passion, integrity, and
+            efficiency for over a decade.
+          </p>
         </div>
-    </footer>
+        <div class="md:w-1/2">
+          <img src="images/hero1.jpg" alt="IMAGE FOR SOMETHING">
+        </div>
+      </div>
+      <!-- Mission -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-12" data-aos="fade-left" data-aos-duration="1000">
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-bold mb-4" data-translate="Our Mission & Client Focus">Our Mission & Client Focus
+          </h3>
+          <p class="text-lg text-gray-200"
+            data-translate="Since our inception, our mission has remained clear: to deliver legal, customer-friendly, and fast services that not only meet but exceed expectations. Our dedication to quality and our customer-first approach have earned us the trust and love of our growing client base.">
+            Since our inception, our mission has remained clear: to deliver legal, customer-friendly, and
+            fast services that not only meet but exceed expectations. Our dedication to quality and our
+            customer-first approach have earned us the trust and love of our growing client base.
+          </p>
+        </div>
+        <div class="md:w-1/2">
+          <img src="images/hero1.jpg" alt="IMAGE FOR SOMETHING">
+        </div>
+      </div>
+      <!-- Values -->
+      <div class="flex flex-col md:flex-row items-center gap-12" data-aos="fade-right" data-aos-duration="1000">
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-bold mb-4" data-translate="Our Values & Approach">Our Values & Approach</h3>
+          <p class="text-lg text-gray-200"
+            data-translate="At Awarjana, we believe in building relationships that last—powered by transparency, professionalism, and a relentless pursuit of excellence. Whether you're a returning client or visiting us for the first time, we're here to provide solutions tailored to your needs with a touch of creativity and a heart full of care. Experience the Awarjana difference—where service is not just a promise, but a tradition.">
+            At Awarjana, we believe in building relationships that last—powered by transparency,
+            professionalism, and a relentless pursuit of excellence. Whether you're a returning client or
+            visiting us for the first time, we're here to provide solutions tailored to your needs with a
+            touch of creativity and a heart full of care.
+            Experience the Awarjana difference—where service is not just a promise, but a tradition.
+          </p>
+        </div>
+        <div class="md:w-1/2">
+          <img src="images/hero1.jpg" alt="IMAGE FOR SOMETHING">
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="border-yellow-400">
+  <section id="products" class="py-16 bg-gray-900">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-6" data-aos="fade-down" data-aos-duration="1000"
+        data-translate="Products">Full with products, full with your needs</h2>
+      <h3 class="text-3xl font-semibold text-center mb-4" data-aos="fade-down" data-aos-duration="1000"
+        data-translate="Why Choose Awarjana Creations and Studio?">Awarjana
+        Creations and Studio offers everything you wish!</h3>   
+      <p class="text-lg text-center mb-10" data-aos="fade-down" data-aos-duration="1000"
+        data-translate="At Awarjana Creations and Studio, we don't just offer services—we deliver trust, quality, and a seamless experience. Here's why so many customers continue to choose us:">
+        Awarjana Creations and Studio offers high-quality products, the main ingridients for your needs: 
+      </p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div class="flex flex-col items-center text-center p-6 bg-gray-800 rounded-lg shadow" data-aos="fade-up"
+          data-aos-duration="1000">
+          <i class="fa-solid fa-box-open text-4xl text-yellow-400 mb-4"></i>
+          <h4 class="text-xl font-bold mb-2" data-translate="PRODUCT NAME">PRDOCUT NAME
+          </h4>
+          <img src="images/logo.png" alt="PRODUCT IMAGE">
+          <p class="text-gray-200"
+            data-translate="DESCRIPTION OF PRODUCT">
+            Bla bla bla</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-6 bg-gray-800 rounded-lg shadow" data-aos="fade-up"
+          data-aos-duration="1000">
+          <i class="fa-solid fa-box-open text-4xl text-yellow-400 mb-4"></i>
+          <h4 class="text-xl font-bold mb-2" data-translate="PRODUCT NAME">PRDOCUT NAME
+          </h4>
+          <img src="images/logo.png" alt="PRODUCT IMAGE">
+          <p class="text-gray-200"
+            data-translate="DESCRIPTION OF PRODUCT">
+            Bla bla bla</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-6 bg-gray-800 rounded-lg shadow" data-aos="fade-up"
+          data-aos-duration="1000">
+          <i class="fa-solid fa-box-open text-4xl text-yellow-400 mb-4"></i>
+          <h4 class="text-xl font-bold mb-2" data-translate="PRODUCT NAME">PRDOCUT NAME
+          </h4>
+          <img src="images/logo.png" alt="PRODUCT IMAGE">
+          <p class="text-gray-200"
+            data-translate="DESCRIPTION OF PRODUCT">
+            Bla bla bla</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-6 bg-gray-800 rounded-lg shadow" data-aos="fade-up"
+          data-aos-duration="1000">
+          <i class="fa-solid fa-box-open text-4xl text-yellow-400 mb-4"></i>
+          <h4 class="text-xl font-bold mb-2" data-translate="PRODUCT NAME">PRDOCUT NAME
+          </h4>
+          <img src="images/logo.png" alt="PRODUCT IMAGE">
+          <p class="text-gray-200"
+            data-translate="DESCRIPTION OF PRODUCT">
+            Bla bla bla</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-6 bg-gray-800 rounded-lg shadow" data-aos="fade-up"
+          data-aos-duration="1000">
+          <i class="fa-solid fa-box-open text-4xl text-yellow-400 mb-4"></i>
+          <h4 class="text-xl font-bold mb-2" data-translate="PRODUCT NAME">PRDOCUT NAME
+          </h4>
+          <img src="images/logo.png" alt="PRODUCT IMAGE">
+          <p class="text-gray-200"
+            data-translate="DESCRIPTION OF PRODUCT">
+            Bla bla bla</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-6 bg-gray-800 rounded-lg shadow" data-aos="fade-up"
+          data-aos-duration="1000">
+          <i class="fa-solid fa-box-open text-4xl text-yellow-400 mb-4"></i>
+          <h4 class="text-xl font-bold mb-2" data-translate="PRODUCT NAME">PRDOCUT NAME
+          </h4>
+          <img src="images/logo.png" alt="PRODUCT IMAGE">
+          <p class="text-gray-200"
+            data-translate="DESCRIPTION OF PRODUCT">
+            Bla bla bla</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="border-yellow-400">
+  <!-- Why us Section -->
+  <section id="why_us" class="py-16 bg-gray-950">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-6" data-aos="fade-down" data-aos-duration="1000"
+        data-translate="Why us and benefits">Why us and benefits</h2>
+      <h3 class="text-3xl font-semibold text-center mb-4" data-aos="fade-down" data-aos-duration="1000"
+        data-translate="Why Choose Awarjana Creations and Studio?">Why Choose Awarjana
+        Creations and Studio?</h3>
+      <p class="text-lg text-center mb-10" data-aos="fade-down" data-aos-duration="1000"
+        data-translate="At Awarjana Creations and Studio, we don't just offer services—we deliver trust, quality, and a seamless experience. Here's why so many customers continue to choose us:">
+        At Awarjana Creations and Studio, we
+        don't just offer services—we deliver trust,
+        quality, and a seamless experience. Here's why so many customers continue to choose us:
+      </p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <!-- Over a Decade of Experience -->
+        <div class="flex flex-col items-center text-center p-6 bg-gray-800 rounded-lg shadow" data-aos="fade-up"
+          data-aos-duration="1000">
+          <i class="fa-solid fa-calendar-days text-4xl text-yellow-400 mb-4"></i>
+          <h4 class="text-xl font-bold mb-2" data-translate="Over a Decade of Experience">Over a Decade of Experience
+          </h4>
+          <p class="text-gray-200"
+            data-translate="Since 2011, we've built a strong reputation for reliability and excellence. Our long-standing presence reflects our commitment to doing things the right way—legally, ethically, and efficiently.">
+            Since 2011, we've built a strong reputation for reliability and excellence. Our
+            long-standing presence reflects our commitment to doing things the right way—legally, ethically, and
+            efficiently.</p>
+        </div>
+        <!-- Customer-Centric Approach -->
+        <div class="flex flex-col items-center text-center p-6 bg-gray-800 rounded-lg shadow" data-aos="fade-up"
+          data-aos-duration="1000">
+          <i class="fa-solid fa-user text-4xl text-yellow-400 mb-4"></i>
+          <h4 class="text-xl font-bold mb-2" data-translate="Customer-Centric Approach">
+            Customer-Centric Approach</h4>
+          <p class="text-gray-200"
+            data-translate="Your satisfaction is our top priority. We listen, we care, and we tailor our services to meet your unique needs. With friendly support and clear communication, we ensure you always feel valued.">
+            Your satisfaction is our top priority. We listen, we care, and we tailor our
+            services to meet your unique needs. With friendly support and clear communication, we ensure you always feel
+            valued.</p>
+        </div>
+        <!-- Fast and Efficient Service -->
+        <div class="flex flex-col items-center text-center p-6 bg-gray-800 rounded-lg shadow" data-aos="fade-up"
+          data-aos-duration="1000">
+          <i class="fa-solid fa-bolt text-4xl text-yellow-400 mb-4"></i>
+          <h4 class="text-xl font-bold mb-2" data-translate="Fast and Efficient Service">Fast and Efficient Service</h4>
+          <p class="text-gray-200"
+            data-translate="We respect your time. Our streamlined processes are designed to deliver fast turnarounds without compromising quality—so you get what you need, when you need it.">
+            We respect your time. Our streamlined processes are designed to deliver fast
+            turnarounds without compromising quality—so you get what you need, when you need it.
+          </p>
+        </div>
+        <!-- Professionalism with a Creative Touch -->
+        <div class="flex flex-col items-center text-center p-6 bg-gray-800 rounded-lg shadow" data-aos="fade-up"
+          data-aos-duration="1000">
+          <i class="fa-solid fa-lightbulb text-4xl text-yellow-400 mb-4"></i>
+          <h4 class="text-xl font-bold mb-2" data-translate="Professionalism with a Creative Touch">Professionalism with
+            a Creative Touch</h4>
+          <p class="text-gray-200"
+            data-translate="We blend professionalism with creativity to bring your ideas to life. Whether it's a creative project or a technical service, we approach every task with passion and precision.">
+            We blend professionalism with creativity to bring your ideas to life. Whether
+            it's a creative project or a technical service, we approach every task with passion and precision.
+          </p>
+        </div>
+        <!-- Trust and Transparency -->
+        <div class="flex flex-col items-center text-center p-6 bg-gray-800 rounded-lg shadow" data-aos="fade-up"
+          data-aos-duration="1000">
+          <i class="fa-solid fa-shield-halved text-4xl text-yellow-400 mb-4"></i>
+          <h4 class="text-xl font-bold mb-2" data-translate="Trust and Transparency">Trust and Transparency</h4>
+          <p class="text-gray-200"
+            data-translate="We believe in building lasting relationships based on trust. No hidden charges, no shortcuts—just honest service you can count on.">
+            We believe in building lasting relationships based on trust. No hidden charges,
+            no shortcuts—just honest service you can count on.</p>
+        </div>
+      </div>
+      <h3 class="text-2xl font-semibold text-center mb-4" data-aos="fade-down" data-aos-duration="1000"
+        data-translate="The Benefits You Get When You Choose Us">The Benefits You Get When
+        You Choose Us</h3>
+      <p class="text-lg text-center mb-10" data-aos="fade-down" data-aos-duration="1000"
+        data-translate="Choosing Awarjana Creations and Studio means gaining more than just a service—it means gaining a trusted partner. Here's what you can expect when you work with us:">
+        Choosing Awarjana Creations and Studio
+        means gaining more than just a service—it means
+        gaining a trusted partner. Here's what you can expect when you work with us:
+      </p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Peace of Mind -->
+        <div class="flex flex-col items-center text-center p-6 bg-gray-800 rounded-lg shadow" data-aos="fade-up"
+          data-aos-duration="1000">
+          <i class="fa-solid fa-check-circle text-4xl text-yellow-400 mb-4"></i>
+          <h4 class="text-xl font-bold mb-2" data-translate="Peace of Mind">Peace of Mind</h4>
+          <p class="text-gray-200"
+            data-translate="Our legal and transparent processes ensure you never have to worry about hidden issues or surprises. You can relax, knowing everything is handled the right way.">
+            Our legal and transparent processes ensure you never have to worry about hidden
+            issues or surprises. You can relax, knowing everything is handled the right way.</p>
+        </div>
+        <!-- Speed Without Stress -->
+        <div class="flex flex-col items-center text-center p-6 bg-gray-800 rounded-lg shadow" data-aos="fade-up"
+          data-aos-duration="1000">
+          <i class="fa-solid fa-rocket text-4xl text-yellow-400 mb-4"></i>
+          <h4 class="text-xl font-bold mb-2" data-translate="Speed Without Stress">Speed Without Stress</h4>
+          <p class="text-gray-200"
+            data-translate="We deliver results quickly, without cutting corners. Our efficient systems make sure you get what you need—fast and hassle-free.">
+            We deliver results quickly, without cutting corners. Our efficient systems make
+            sure you get what you need—fast and hassle-free.</p>
+        </div>
+        <!-- Friendly, Personalized Service -->
+        <div class="flex flex-col items-center text-center p-6 bg-gray-800 rounded-lg shadow" data-aos="fade-up"
+          data-aos-duration="1000">
+          <i class="fa-solid fa-heart text-4xl text-yellow-400 mb-4"></i>
+          <h4 class="text-xl font-bold mb-2" data-translate="Friendly, Personalized Service">Friendly, Personalized
+            Service</h4>
+          <p class="text-gray-200"
+            data-translate="We treat every client like family. You'll always be met with respect, clear communication, and service tailored to your specific needs.">
+            We treat every client like family. You'll always be met with respect, clear
+            communication, and service tailored to your specific needs.</p>
+        </div>
+        <!-- Proven Experience & Reliability -->
+        <div class="flex flex-col items-center text-center p-6 bg-gray-800 rounded-lg shadow" data-aos="fade-up"
+          data-aos-duration="1000">
+          <i class="fa-solid fa-award text-4xl text-yellow-400 mb-4"></i>
+          <h4 class="text-xl font-bold mb-2" data-translate="Proven Experience & Reliability">Proven Experience &
+            Reliability</h4>
+          <p class="text-gray-200"
+            data-translate="With over a decade of consistent performance, our track record speaks for itself. We've earned the trust of countless satisfied customers—and we're ready to earn yours.">
+            With over a decade of consistent performance, our track record speaks for itself.
+            We've earned the trust of countless satisfied customers—and we're ready to earn yours.</p>
+        </div>
+        <!-- Creative Excellence -->
+        <div class="flex flex-col items-center text-center p-6 bg-gray-800 rounded-lg shadow" data-aos="fade-up"
+          data-aos-duration="1000">
+          <i class="fa-solid fa-palette text-4xl text-yellow-400 mb-4"></i>
+          <h4 class="text-xl font-bold mb-2" data-translate="Creative Excellence">Creative Excellence</h4>
+          <p class="text-gray-200"
+            data-translate="Whether it's design, media, or branding, we bring fresh ideas to the table. You get innovative solutions backed by technical skill and creative flair.">
+            Whether it's design, media, or branding, we bring fresh ideas to the table. You
+            get innovative solutions backed by technical skill and creative flair.
+          </p>
+        </div>
+        <!-- Long-Term Support -->
+        <div class="flex flex-col items-center text-center p-6 bg-gray-800 rounded-lg shadow" data-aos="fade-up"
+          data-aos-duration="1000">
+          <i class="fa-solid fa-handshake text-4xl text-yellow-400 mb-4"></i>
+          <h4 class="text-xl font-bold mb-2" data-translate="Long-Term Support">Long-Term Support</h4>
+          <p class="text-gray-200"
+            data-translate="We're with you every step of the way—before, during, and after your project. You'll never feel left behind or out of touch.">
+            We're with you every step of the way—before, during, and after your project.
+            You'll never feel left behind or out of touch.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="border-yellow-400">
 
-    <script src="script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
-    <script src="https://kit.fontawesome.com/7e0dc38838.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+  <!-- Hours Section -->
+  <section id="hours" class="py-16 bg-gray-800">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-down" data-aos-duration="1000"
+        data-translate="Hours">Hours</h2>
+      <h3 class="text-2xl font-semibold text-center mb-4" data-aos="fade-down" data-aos-duration="1000"
+        data-translate="We're open everyday!">We're open everyday!</h3>
+      <p class="text-center mb-10" data-aos="fade-down" data-aos-duration="1000"
+        data-translate="We're open everyday from 8:30 AM to 6:30 PM and we're not open on public holidays.">
+        We're open everyday from 8:30 AM to 6:30 PM
+        and we're not open on public holidays.</p>
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-gray-800 rounded-md text-white text-lg text-center divide-y divide-gray-700 shadow"
+          data-aos="fade-up" data-aos-duration="1000">
+          <thead>
+            <tr>
+              <th class="p-4" data-translate="Day/Period">Day/Period</th>
+              <th class="p-4" data-translate="Opening time">Opening time</th>
+              <th class="p-4" data-translate="Closing time">Closing time</th>
+              <th class="p-4" data-translate="Status">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td>8:30 A.M.</td>
+              <td>6:30 P.M.</td>
+              <td id="monday-status"></td>
+            </tr>
+            <tr>
+              <td>Tuesday</td>
+              <td>8:30 A.M.</td>
+              <td>6:30 P.M.</td>
+              <td id="tuesday-status"></td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>8:30 A.M.</td>
+              <td>6:30 P.M.</td>
+              <td id="wednesday-status"></td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td>8:30 A.M.</td>
+              <td>6:30 P.M.</td>
+              <td id="thursday-status"></td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>8:30 A.M.</td>
+              <td>6:30 P.M.</td>
+              <td id="friday-status"></td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>8:30 A.M.</td>
+              <td>6:30 P.M.</td>
+              <td id="saturday-status"></td>
+            </tr>
+            <tr>
+              <td>Sunday</td>
+              <td>8:30 A.M.</td>
+              <td>6:30 P.M.</td>
+              <td id="sunday-status"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Calendar and Legend: Tailwind styled, logic can be implemented as needed -->
+      <div id="calendar-container" class="mt-10" data-aos="fade-up" data-aos-duration="1000"
+        data-translate="calendar_container">
+        <div id="calendar-header" class="flex items-center justify-center gap-4 mb-4" data-translate="calendar_header">
+          <button class="bg-yellow-400 px-3 py-1 rounded" id="prev-month" aria-label="Previous month"
+            data-translate="prev_month">&lt;</button>
+          <h4 id="calendar-month-year" class="font-bold text-lg" data-translate="calendar_month_year"></h4>
+          <button class="bg-yellow-400 px-3 py-1 rounded" id="next-month" aria-label="Next month"
+            data-translate="next_month">&gt;</button>
+        </div>
+        <div id="holiday-calendar" class="bg-gray-800 rounded-lg p-4" data-translate="holiday_calendar"></div>
+      </div>
+      <div class="legend mt-6 space-y-3">
+        <p class="text-xl font-bold text-white">Legend:</p>
+        <ul class="space-y-2 text-lg text-gray-200">
+          <li class="flex items-center">
+            <span class="inline-block w-4 h-4 bg-yellow-300 rounded-full mr-3 border border-yellow-400"></span>
+            Current Day
+          </li>
+          <li class="flex items-center">
+            <span class="inline-block w-4 h-4 bg-red-200 rounded-full mr-3 border border-red-400"></span>
+            Holiday
+          </li>
+          <li class="flex items-center">
+            <span class="relative inline-block w-6 h-6 mr-3" aria-hidden="true">
+              <span class="absolute inset-0 bg-yellow-300 rounded-full border border-yellow-400"></span>
+              <span class="absolute -top-1 -right-1 w-3 h-3 bg-red-600 rounded-full ring-1 ring-white"></span>
+            </span>
+            Holiday on Current Day
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <hr class="border-yellow-400">
+
+  <!-- Contacts Section -->
+  <section id="contacts" class="py-16 bg-gray-900" data-translate="contacts_section">
+    <div class="container mx-auto px-6" data-translate="contacts_container">
+      <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-down" data-aos-duration="1000"
+        data-translate="contacts">Contacts</h2>
+      <h3 class="text-2xl font-semibold text-center mb-4" data-aos="fade-down" data-aos-duration="1000"
+        data-translate="stay_with_us">
+        Stay with us in many ways!</h3>
+      <p class="text-center mb-10" data-aos="fade-down" data-aos-duration="1000" data-translate="get_in_touch">
+        Get in touch with us for any inquiries or to request a quote.
+      </p>
+      <div class="grid md:grid-cols-2 gap-16" data-translate="contacts_grid">
+        <!-- Where to Meet Us -->
+        <div data-aos="fade-right" data-aos-duration="1000" data-translate="where_to_meet_row">
+          <h4 class="text-xl font-bold mb-2" data-translate="where_to_meet">Where to meet us?</h4>
+          <p class="mb-3 text-gray-200" data-translate="address">
+            We are in No. 64, Muslim Church Road, 24 Veyangoda Rd, Minuwangoda 11550, Sri Lanka.
+          </p>
+          <div class="aspect-video rounded-lg overflow-hidden shadow-lg" data-translate="map_container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.6282061910965!2d79.94601647478841!3d7.168905915327373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2e5d0fa312f21%3A0x639f574d5aa3ae69!2sAwarjana%20Creations!5e0!3m2!1sit!2sit!4v1746268562734!5m2!1sit!2sit"
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <!-- How to Contact Us -->
+        <div data-aos="fade-left" data-aos-duration="1000" data-translate="how_to_contact_row">
+          <h4 class="text-xl font-bold mb-2" data-translate="how_to_contact">How to contact us?</h4>
+          <p class="mb-3 text-gray-200" data-translate="contact_methods">
+            You can contact us in many ways, through phone and emails!
+          </p>
+          <div class="flex flex-col gap-4" data-translate="contact_list">
+            <a class="flex items-center gap-4 bg-gray-800 p-4 rounded-lg hover:bg-yellow-400 hover:text-black transition"
+              data-translate="whatsapp_link1">
+              <i class="fa-brands fa-square-whatsapp text-3xl" style="color: #25d366;"></i>
+              <span class="text-lg font-bold" data-translate="phone_number1">+94 077 176 0459</span>
+            </a>
+            <a class="flex items-center gap-4 bg-gray-800 p-4 rounded-lg hover:bg-yellow-400 hover:text-black transition"
+              data-translate="whatsapp_link2">
+              <i class="fa-brands fa-whatsapp text-3xl" style="color: #25d366;"></i>
+              <span class="text-lg font-bold" data-translate="phone_number2">+94 077 176 0459</span>
+            </a>
+            <a class="flex items-center gap-4 bg-gray-800 p-4 rounded-lg hover:bg-yellow-400 hover:text-black transition"
+              data-translate="phone_link">
+              <i class="fa-solid fa-phone text-3xl" style="color: blue;"></i>
+              <span class="text-lg font-bold" data-translate="phone_number3">+94 011 228 3020</span>
+            </a>
+            <a class="flex items-center gap-4 bg-gray-800 p-4 rounded-lg hover:bg-yellow-400 hover:text-black transition"
+              data-translate="email_link">
+              <i class="fa-solid fa-envelope text-3xl" style="color: red;"></i>
+              <span class="text-lg font-bold" data-translate="email_address">awarjanacreation1@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-950 py-10 mt-10">
+    <div class="container mx-auto px-6 flex flex-col items-center">
+      <a href="#" class="mb-6">
+        <img class="h-12" alt="Awarjana logo" src="images/logo.png" />
+      </a>
+      <div class="flex space-x-4 mb-6">
+        <a href="https://www.youtube.com/watch?v=Py7X9TfyVE0" target="_blank" class="hover:text-yellow-400">
+          <i class="fab fa-youtube text-2xl"></i>
+        </a>
+        <a href="https://www.facebook.com/p/Awarjana-Creations-100090293863478" target="_blank"
+          class="hover:text-yellow-400">
+          <i class="fab fa-facebook-f text-2xl"></i>
+        </a>
+        <a href="https://www.tiktok.com/@awrjanacreation" target="_blank" class="hover:text-yellow-400">
+          <i class="fab fa-tiktok text-2xl"></i>
+        </a>
+        <a href="https://www.pinterest.com/awarjanac/" target="_blank" class="hover:text-yellow-400">
+          <i class="fab fa-pinterest-p text-2xl"></i>
+        </a>
+      </div>
+      <p class="text-lg text-gray-300 text-center">
+        Copyright © <span class="year"></span> by Awarjana Creation and Studio, Inc. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    // Mobile nav toggle logic
+    function toggleMobileNav() {
+      const nav = document.getElementById('mobile-nav');
+      nav.classList.toggle('hidden');
+    }
+    document.getElementById('btn-mobile-nav').addEventListener('click', toggleMobileNav);
+    // Language switching placeholder
+    function setLanguage(lang) {
+      alert('Language switched to: ' + lang);
+    }
+    // Carousel logic (simple demo)
+    let carouselIdx = 0;
+    function showCarousel(idx) {
+      const slides = document.querySelectorAll('.carousel-img');
+      slides.forEach((el, i) => el.classList.toggle('block', i === idx));
+      slides.forEach((el, i) => el.classList.toggle('hidden', i !== idx));
+    }
+    function prevCarousel() {
+      const slides = document.querySelectorAll('.carousel-img');
+      carouselIdx = (carouselIdx - 1 + slides.length) % slides.length;
+      showCarousel(carouselIdx);
+    }
+    function nextCarousel() {
+      const slides = document.querySelectorAll('.carousel-img');
+      carouselIdx = (carouselIdx + 1) % slides.length;
+      showCarousel(carouselIdx);
+    }
+    showCarousel(carouselIdx);
+    // Set copyright year
+    document.querySelectorAll('.year').forEach(el => el.textContent = new Date().getFullYear());
+  </script>
+  <script src="https://kit.fontawesome.com/7e0dc38838.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

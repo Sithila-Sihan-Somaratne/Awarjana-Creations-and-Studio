@@ -1,205 +1,131 @@
+/* Tailwind-enhanced General Styles */
+
 * {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 0 !important;
-    box-sizing: border-box;
+    @apply p-0 m-0 box-border;
 }
 
 html {
-    /* font-size: 10px; */
-
-    /* 10px / 16px = 0.625 = 62.5% */
-    /* Percentage of user's browser font-size setting */
-    font-size: 62.5%;
-    overflow-x: hidden;
-
-    /* Does NOT work on Safari */
-    /* scroll-behavior: smooth; */
+    @apply text-[62.5%] overflow-x-hidden; /* 10px / 16px = 62.5% */
 }
 
 body {
-    font-family: "Rubik", sans-serif;
-    line-height: 1;
-    font-weight: 400;
-    color: #555;
-
-    /* Only works if there is nothing absolutely positioned in relation to body */
-    overflow-x: hidden;
+    @apply font-rubik text-gray-700 font-normal leading-none overflow-x-hidden;
 }
 
-p{
-    color: black !important;
+p {
+    @apply text-black;
 }
+
 /**************************/
 /* GENERAL REUSABLE COMPONENTS */
 /**************************/
 
 .grid {
-    display: grid;
-    column-gap: 6.4rem;
-    row-gap: 9.6rem;
-
-    /* margin-bottom: 9.6rem; */
+    @apply grid gap-x-16 gap-y-24;
 }
 
-/* .grid:last-child {
-    margin-bottom: 0;
-  } */
-
 .grid:not(:last-child) {
-    margin-bottom: 9.6rem;
+    @apply mb-24;
 }
 
 .grid--2-cols {
-    grid-template-columns: repeat(2, 1fr);
+    @apply grid-cols-2;
 }
 
 .grid--3-cols {
-    grid-template-columns: repeat(3, 1fr);
+    @apply grid-cols-3;
 }
 
 .grid--4-cols {
-    grid-template-columns: repeat(4, 1fr);
+    @apply grid-cols-4;
 }
 
 .grid--5-cols {
-    grid-template-columns: repeat(5, 1fr);
+    @apply grid-cols-5;
 }
 
 .grid--center-v {
-    align-items: center;
+    @apply items-center;
 }
 
 .heading-primary,
 .heading-secondary,
 .heading-tertiary {
-    font-weight: 700;
-    color: #333;
-    /* color: #45260a; */
-    /* color: #343a40; */
-    letter-spacing: -0.5px;
+    @apply font-bold text-gray-800 tracking-tight;
 }
 
 .heading-primary {
-    font-size: 5.2rem;
-    line-height: 1.05;
-    margin-bottom: 3.2rem;
+    @apply text-5xl leading-tight mb-8;
 }
 
 .heading-secondary {
-    font-size: 4.4rem;
-    line-height: 1.2;
-    margin-bottom: 9.6rem;
+    @apply text-4xl leading-snug mb-24;
 }
 
 .heading-tertiary {
-    font-size: 3rem;
-    line-height: 1.2;
-    margin-bottom: 3.2rem;
+    @apply text-3xl leading-snug mb-8;
 }
 
 .subheading {
-    display: block;
-    font-size: 1.6rem;
-    font-weight: 500;
-    color: #ffcc00;
-    text-transform: uppercase;
-    margin-bottom: 1.6rem;
-    letter-spacing: 0.75px;
+    @apply block text-lg font-medium text-yellow-500 uppercase mb-4 tracking-wide;
 }
 
 .btn,
 .btn:link,
 .btn:visited {
-    display: inline-block;
-
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 700 !important;
-    padding: 1.6rem 3.2rem;
-    border-radius: 9px;
-
-    /* Only necessary for .btn */
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-
-    /* Put transition on original "state" */
-    /* transition: background-color 0.3s; */
-    transition: all 0.3s;
+    @apply inline-block no-underline text-lg font-bold py-4 px-8 rounded-lg border-none cursor-pointer transition-all;
 }
 
 .btn--form {
-    background-color: #45260a;
-    color: #fdf2e9;
-    align-self: end;
-    padding: 1.2rem;
+    @apply bg-gray-800 text-white self-end py-3;
 }
 
 .btn--form:hover {
-    background-color: #fff;
-    color: #555;
+    @apply bg-white text-gray-700;
 }
 
 .link:link,
 .link:visited {
-    display: inline-block;
-    color: #f3c717;
-    text-decoration: none;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 2px;
-    transition: all 0.3s;
+    @apply inline-block text-yellow-500 no-underline border-b border-current pb-0.5 transition-all;
 }
 
 .link:hover,
 .link:active {
-    color: #ffcc00;
-    border-bottom: 1px solid transparent;
+    @apply text-yellow-400 border-b-transparent;
 }
 
 .list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
+    @apply list-none flex flex-col gap-4;
 }
 
 .list-item {
-    font-size: 1.8rem;
-    display: flex;
-    align-items: center;
-    gap: 1.6rem;
-    line-height: 1.2;
+    @apply text-lg flex items-center gap-4 leading-snug;
 }
 
 .list-icon {
-    width: 3rem;
-    height: 3rem;
-    color: #ffcc00;
+    @apply w-12 h-12 text-yellow-500;
 }
 
 *:focus {
-    outline: none;
-    /* outline: 4px dotted #e67e22; */
-    /* outline-offset: 8px; */
-    box-shadow: 0 0 0 0.4rem hsla(48, 100%, 50%, 0.5);
+    @apply outline-none shadow-outline focus:ring focus:ring-yellow-400;
 }
 
 /* HELPER/SETTINGS CLASSES */
+
 .margin-right-sm {
-    margin-right: 1.6rem !important;
+    @apply mr-4;
 }
 
 .margin-bottom-md {
-    margin-bottom: 4.8rem !important;
+    @apply mb-12;
 }
 
 .center-text {
-    text-align: center;
+    @apply text-center;
 }
 
 strong {
-    font-weight: 600;
+    @apply font-semibold;
 }
 
 .section-about-us,
@@ -208,14 +134,9 @@ strong {
 .section-products,
 .section-pricings,
 .section-contacts {
-    padding: 9.6rem 0;
+    @apply py-24;
 }
 
-.heading-section{
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    letter-spacing: 0.75px;
-    font-weight: 500;
-    margin-bottom: 2.4rem;
-    color: #806411;
+.heading-section {
+    @apply text-sm uppercase tracking-wide font-medium mb-6 text-yellow-900;
 }
