@@ -544,3 +544,45 @@ document.addEventListener("DOMContentLoaded", async () => {
   updateHoursStatusOnce();
   setInterval(updateHoursStatusOnce, 30 * 1000);
 });
+
+// Translation System for Plain HTML
+// Usage: Add data-translate="text" to any HTML element
+
+(function() {
+  let translations = {};
+  let currentLanguage = 'en';
+
+  // Load translations from JSON file
+  async function loadTranslations() {
+    try {
+      const response = await fetch('translations.json');
+      translations = await response.json();
+      
+      // Get saved language from localStorage or default to 'en'
+      currentLanguage = localStorage.getItem('language') || 'en';
+      
+      // Apply translations immediately
+      translatePage();
+    } catch (error) {
+      console.error('Error loading translations:', error);
+    }
+  }
+
+  // Translate all elements with data-translate attribute
+  function translatePage() {
+    const elements = document.querySelectorAll('[data-translate]');
+    
+    elements.forEach(element => {
+      const key = element.getAttribute('data-translate');
+      
+      if (translations[currentLanguage] && translations[currentLanguage][key]) {
+        // Check if element is an input/textarea with placeholder
+        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+          element.placeholder = translations[currentLanguage][key];
+        } else {
+          element.textContent = translations[currentLanguage][key];
+        }
+      }
+    });
+  }
+})
